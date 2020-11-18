@@ -1323,11 +1323,15 @@ class Chirp_average(Trigger_ChirpData):
         plt.xlim(-1*B_chirp/2*1e-6, B_chirp/2*1e-6)
         plt.xlabel('Frequency (MHz)')
         plt.ylabel('Correlation between Time shifted data and inital (degrees)')
+        
+        Y_angle_list = []
+        
         for i in df:
             df_corrcheck[i] = df_Xfix[i]*np.conj(df_FFT[0])
             #params_list.append(fit_chirp(f, df_corrcheck[str(i)], B_chirp, F_center, False)[0])
             f_angle, Y_angle = self.remove_zero_cross(f, df_corrcheck[i], B_chirp, F_center) 
             plt.plot(f_angle, Y_angle/np.pi*180)
+            Y_angle_list.append(Y_angle/np.pi*180)
 
         #plt.savefig("corrs.pdf", bbox_inches='tight')
         plt.show()
@@ -1374,4 +1378,4 @@ class Chirp_average(Trigger_ChirpData):
     #put the fixed dataframe into table - aligned_data in the hdf5_datafile
     #self.save_array_data_to_hdf5(x_int, self.hdf5_datafile, 'aligned_data')
         
-        return f, 10*np.log(R_avg)/np.log(10), df_Xfix
+        return f, 10*np.log(R_avg)/np.log(10), df_xfix 
