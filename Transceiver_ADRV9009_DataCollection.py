@@ -75,6 +75,7 @@ class simple_chirp:
             data_array.append(self.make_edge(i, verbose))
     
         print()
+        print("elems of Data Array")
         if(verbose == True):
             print([hex(elem) for elem in data_array])
         
@@ -227,8 +228,6 @@ class chirp_wave(simple_chirp):
             plt.plot(quant_data)
             plt.show()
             
-        print("length " +str(len(quant_data)))
-            
         #create an empty list used to grab 40 bit chunks from quant_data.  
         tx_bram_list = []
         for i in range(0,len(quant_data), 40):
@@ -311,13 +310,13 @@ class chirp_spectrum_analysis:
 
         #create frequency range according to the number of samples and sample rate
         xf = np.arange(-int(N_sample/2), int(N_sample/2))/N_sample*F_sample/1e6
-  
+
         if(verbose):
             plt.figure(figsize=(7, 6))
             plt.grid()
             plt.xlabel("Frequency (MHz)")
             plt.ylabel("Power (dBFS)")
-            plt.xlim(0,3000)
+            plt.xlim(0,6000)
             plt.plot(xf, 10*np.log(X_norm)/np.log(10))
             plt.show()
             
@@ -328,13 +327,13 @@ class chirp_spectrum_analysis:
     def get_window(self, data_in):
         
         #Finds 80% of the number of samples
-        N_samples = int(len(data_in)*0.7)
+        N_samples = int(len(data_in)*0.8)
         
         #creates windowing function
         window = list(signal.tukey(N_samples, 0.5))
         
         #Finds 10% of the number of samples
-        zeros = [0]*int(len(data_in)*.15)
+        zeros = [0]*int(len(data_in)*.1)
         
         #adds zeros to each end of the windowing function
         window = zeros + window + zeros
@@ -444,6 +443,7 @@ class ADRV9009_Data:
         
         sdr.tx_destroy_buffer()
         sdr.rx_destroy_buffer()
+        sdr.rx_buffer_size = self.rx_buffer_size
         sdr.tx_enabled_channels = [0, 1]
         # Create a sinewave waveform
         #N = 256000
@@ -464,6 +464,8 @@ class ADRV9009_Data:
         data_out = sdr.rx()
         sdr.tx_destroy_buffer()
         sdr.rx_destroy_buffer()
+        
+        data_out = list(data_out[0])
     
         return data_out
     ###############################################################################    
@@ -488,7 +490,9 @@ class ADRV9009_Data:
         
 ###############################################################################
 # A layer of abstraction used to configure the ADRV9009 data collection params (that could be set
-# by just setting sdr.param).  Also, saves the params in a dataframe df_params.  
+# by just setting sdr.param).  This protects from writing to read only params and making sure,
+# the correct type is used when writing.  Also, saves the params as local vars that cans be used
+# later to save to a dataframe by doing vars(ADRV9009_Config_1).
 # It takes as input f_lo the frequency of the local oscillator, rx_gain the hardware gain
 # of the receiver, rx_buffer_size size of number of samples to collect, tx_gain the 
 # transmit gain of the ADRV9009 transmit section, calibrate_rx_phase_correction_en - 
@@ -496,110 +500,9 @@ class ADRV9009_Data:
 ###############################################################################
 class ADRV9009_Config(ADRV9009_Data):
     
-    df_params = pd.DataFrame()
-    
-    ###############################################################################
-    # constructor takes args and writes to df_params.
-    ############################################################################### 
-    def __init__(self, ip = "ip:192.168.1.21", f_lo = 700000000, rx_gain = 25, rx_buffer_size = 1024*32,
-                 tx_gain = -14, calibrate_rx_phase_correction_en = 0, calibrate_rx_qec_en = 0, calibrate_tx_qec_en = 0, 
-                 calibrate = 1):
-        
-        ADRV9009_Data.__init__(self, ip = ip, rx_buffer_size = rx_buffer_size)
-        
-        #get params from the ADRV9009
-        ADRV9009_Config.df_params = self.get_params_from_ADRV9009(ip)
-        
-        #set ip value in df
-        ADRV9009_Config.df_params.loc[0, 'ip'] = ip
-        ADRV9009_Config.df_params['trx_lo'] = int(f_lo)        
-        ADRV9009_Config.df_params['rx_gain'] = rx_gain
-        ADRV9009_Config.df_params['tx_gain'] = tx_gain
-        ADRV9009_Config.df_params['calibrate_rx_phase_correction_en'] = calibrate_rx_phase_correction_en
-        ADRV9009_Config.df_params['calibrate_rx_qec_en'] = calibrate_rx_qec_en
-        ADRV9009_Config.df_params['calibrate_tx_qec_en'] = calibrate_tx_qec_en
-        ADRV9009_Config.df_params['calibrate'] = calibrate
-        ADRV9009_Config.df_params['rx_buffer_size'] = rx_buffer_size
-        
-        #set the params in the ADRV9009
-        self.set_params_ADRV9009(ADRV9009_Config.df_params)
-        
-    ###############################################################################    
-    #gets the the configuration parameters from the adrv9009 and returns as a dataframe
-    ###############################################################################
-    def get_params_from_ADRV9009(self, ip = "ip:192.168.1.21"):
-        
-        #adi didn't make there classes iterable so I'll just hardcode
-        params_list = ['ip','frequency_hopping_mode','frequency_hopping_mode_en','calibrate_rx_phase_correction_en','calibrate_rx_qec_en',
-                 'calibrate_tx_qec_en','calibrate','gain_control_mode_chan0','gain_control_mode_chan1','rx_hardwaregain_chan0',
-                 'rx_hardwaregain_chan1','tx_hardwaregain_chan0','tx_hardwaregain_chan1','rx_rf_bandwidth','tx_rf_bandwidth',
-                 'rx_sample_rate','tx_sample_rate','trx_lo','rx_buffer_size']
-
-        #create an empty df with column names params_list
-        df_params = pd.DataFrame(columns=params_list)
-        
-        #set ip value in df
-        df_params.loc[0, 'ip'] = ip
-
-        #get handle of the adrv9009 from df
-        sdr = adi.adrv9009(uri=df_params['ip'][0])  
-        
-        #assign to class variable
-        ADRV9009_Data.sdr = sdr
-
-        #get params from the adrv9009 and assign them to df
-        df_params['frequency_hopping_mode'] = sdr.frequency_hopping_mode
-        df_params['frequency_hopping_mode_en'] = sdr.frequency_hopping_mode_en
-        df_params['calibrate_rx_phase_correction_en'] = sdr.calibrate_rx_phase_correction_en
-        df_params['calibrate_rx_qec_en'] = sdr.calibrate_rx_qec_en
-        df_params['calibrate_tx_qec_en'] = sdr.calibrate_tx_qec_en
-        df_params['calibrate'] = 1 #read only
-        df_params['gain_control_mode_chan0'] = sdr.gain_control_mode_chan0
-        df_params['gain_control_mode_chan1'] = sdr.gain_control_mode_chan1
-        df_params['rx_hardwaregain_chan0'] = sdr.rx_hardwaregain_chan0
-        df_params['rx_hardwaregain_chan1'] = sdr.rx_hardwaregain_chan1
-        df_params['tx_hardwaregain_chan0'] = sdr.tx_hardwaregain_chan0
-        df_params['tx_hardwaregain_chan1'] = sdr.tx_hardwaregain_chan1
-        df_params['rx_rf_bandwidth'] = sdr.rx_rf_bandwidth
-        df_params['tx_rf_bandwidth'] = sdr.tx_rf_bandwidth
-        df_params['rx_sample_rate'] = sdr.rx_sample_rate
-        df_params['tx_sample_rate'] = sdr.tx_sample_rate
-        df_params['trx_lo'] = sdr.trx_lo
-        df_params['rx_buffer_size'] = sdr.rx_buffer_size
-        #df_params['tx_buffer_size'] = sdr.tx_buffer_size
-
-        return df_params
-    ###############################################################################    
-    #sets the parameters of the adrv9009 based on the df_in - which is a dataframe
-    ###############################################################################
-    def set_params_ADRV9009(self, df_in):
-        
-        sdr = ADRV9009_Config.sdr
-        sdr.tx_destroy_buffer()
-        sdr.rx_destroy_buffer()
-        sdr.tx_cyclic_buffer = True
-        sdr.trx_lo = df_in['trx_lo'][0]
-        sdr.gain_control_mode = df_in['gain_control_mode_chan0'][0]
-        sdr.rx_buffer_size = int(df_in['rx_buffer_size'][0])
-        #sdr.tx_buffer_size = int(df_in['tx_buffer_size'][0])
-        sdr.rx_hardwaregain_chan0 = df_in['rx_hardwaregain_chan0'][0]
-        sdr.tx_hardwaregain_chan0 = df_in['tx_hardwaregain_chan0'][0]
-        sdr.calibrate_rx_phase_correction_en = df_in['calibrate_rx_phase_correction_en'][0]
-        sdr.calibrate_rx_qec_en = df_in['calibrate_rx_qec_en'][0]
-        sdr.calibrate_tx_qec_en = df_in['calibrate_tx_qec_en'][0]
-        sdr.calibrate = df_in['calibrate'][0]
-
-        #sdr.rx_rf_bandwidth = df1['rx_rf_bandwidth'][0] #READ ONLY
-        #sdr.tx_rf_bandwidth = df1['tx_rf_bandwidth'][0] #READ ONLY
-        #sdr.rx_sample_rate = df1['rx_sample_rate'][0]   #READ ONLY
-
-class ADRV9009_Config_1(ADRV9009_Data):
-    
     ip = None
-    f_lo = None
-    rx_gain = None
+    trx_lo = None
     rx_buffer_size = None
-    tx_gain = None
     calibrate_rx_phase_correction_en = None
     calibrate_rx_qec_en = None
     calibrate_tx_qec_en = None
@@ -637,9 +540,9 @@ class ADRV9009_Config_1(ADRV9009_Data):
         
         #set ip value in df
         self.ip = ip
-        self.f_lo = int(f_lo)        
-        self.rx_gain = rx_gain
-        self.tx_gain = tx_gain
+        self.trx_lo = int(f_lo)        
+        self.rx_hardwaregain_chan0 = rx_gain
+        self.tx_hardwaregain_chan0 = tx_gain
         self.calibrate_rx_phase_correction_en = calibrate_rx_phase_correction_en
         self.calibrate_rx_qec_en = calibrate_rx_qec_en
         self.calibrate_tx_qec_en = calibrate_tx_qec_en
@@ -680,7 +583,7 @@ class ADRV9009_Config_1(ADRV9009_Data):
         self.tx_rf_bandwidth = sdr.tx_rf_bandwidth
         self.rx_sample_rate = sdr.rx_sample_rate
         self.tx_sample_rate = sdr.tx_sample_rate
-        self.f_lo = sdr.trx_lo
+        self.trx_lo = sdr.trx_lo
         self.rx_buffer_size = sdr.rx_buffer_size
         #df_params['tx_buffer_size'] = sdr.tx_buffer_size
 
@@ -693,8 +596,8 @@ class ADRV9009_Config_1(ADRV9009_Data):
         sdr.tx_destroy_buffer()
         sdr.rx_destroy_buffer()
         sdr.tx_cyclic_buffer = True
-        sdr.trx_lo = self.f_lo
-        sdr.gain_control_mode = self.gain_control_mode_chan0
+        sdr.trx_lo = self.trx_lo
+        sdr.gain_control_mode = 'manual'
         sdr.rx_buffer_size = self.rx_buffer_size
         #sdr.tx_buffer_size = int(df_in['tx_buffer_size'][0])
         sdr.rx_hardwaregain_chan0 = self.rx_hardwaregain_chan0
@@ -742,6 +645,8 @@ class Collect_HDF5:
             elem_type = type(df_out[elem][0])
             if(elem_type == str):
                 elem_type = '|S'
+            elif(elem_type == int):
+                elem_type = np.uint64
     
             #apply the type of the zeroth value of elem to the column elem
             df_out[elem] = df_out[elem].astype(str).astype(elem_type)
@@ -1246,15 +1151,22 @@ class Chirp_average(Trigger_ChirpData):
     
     ###############################################################################
     # Gets a windowing function function based on data_in.  Data_in is a list of time series
-    # chirp data.  80% of the data_in is used to construct the window and padded by zeros
-    # for the remaining 20$.
+    # chirp data.  The assumptions for data_in is that the chirp is centered and that the 
+    # N_samples in data_in be 2x the N_samples corresponding to T_chirp.  This function
+    # returns a list consisting of windowing function and a bunch of zeros to the left
+    # and right.
     ###############################################################################    
     def getwindow(self, data_in):
-        N_samples = int(len(data_in)*0.8)
+        N_samples = int(len(data_in)*0.5)
         window = list(signal.tukey(N_samples, 0.5))
-        zeros = [0]*int(len(data_in)*.1)
-        window = zeros + window + zeros
-        #window = [30000*elem for elem in window]
+        
+        N_zeros_left = int(len(data_in)*.25)
+        N_zeros_right = int(len(data_in)) - N_samples - N_zeros_left
+        
+        zeros_left = [0]*N_zeros_left
+        zeros_right = [0]*N_zeros_right
+        window = zeros_left + window + zeros_right
+        window = [32767*elem for elem in window]
         return window
     
     ###############################################################################
@@ -1361,8 +1273,15 @@ class Chirp_average(Trigger_ChirpData):
 
         #plot windowing function
         if(verbose):
-            plt.plot(df_xfix/abs(df[0].max()))
-            plt.plot(window)
+            plt.figure(figsize = (8,8))
+            plt.plot(np.real(df_xfix[0]), label = "Triggered Real Data")
+            for i in range(1, M_sample):
+                plt.plot(np.real(df_xfix[i]))
+                         
+            plt.plot(window, label = "windowing function")
+            plt.xlabel("Number of Samples (arb)")
+            plt.ylabel("Amplitude (ADC Code)")
+            plt.legend()
             plt.show()
 
         #incoherent averaging of my time shifted (fixed) samples
