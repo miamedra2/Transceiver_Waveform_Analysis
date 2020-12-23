@@ -154,7 +154,7 @@ class square_wave(simple_chirp):
         pd.DataFrame(tx_bram_list).to_csv("tx_bram.txt", index=False, header=False)
         
         return tx_bram_list
-        
+
 ###############################################################################
 # Square_wave redefines make_waveform in simple_chirp to create a chirp wave
 # pattern.  It takes as input F_sample = the sample rate of the tranceiver, 
@@ -195,7 +195,7 @@ class chirp_wave(simple_chirp):
     # Redefines make_waveform in simple_chirp to create a chirp based on the constructor arguments of chirp_wave.  
     # Saves the chirp_waveform by putting 40 bit chunks into the file specified by text_name.
     ###############################################################################
-    def make_waveform(self, verbose=False):
+    def __make_waveform(self, plot_en=False):
         
         TX_BRAM_MAX = 8191
         
@@ -216,32 +216,23 @@ class chirp_wave(simple_chirp):
         x = np.array([self.chirp_exp(elem[1], K_chirp, F_center) if abs(elem[1])<=T_chirp/2 else 0 for elem in enumerate(t)])
         
         #plots the chirp
-        if(verbose == True):
+        if(plot_en == True):
             plt.plot(np.real(x))
             plt.show()
         
         #normalizes the chirp to 1 and then rounds (0,1) and casts each elem to an int to get a list   
         quant_data = [int(elem) for elem in np.round(0.5*(np.real(x)+1))]
-   
-        #plots the quantized data
-        if(verbose == True):
-            plt.plot(quant_data)
-            plt.show()
-            
-        #create an empty list used to grab 40 bit chunks from quant_data.  
-        tx_bram_list = []
-        for i in range(0,len(quant_data), 40):
-            pattern = 0
-    
-            for j in range(40):
-                pattern = (quant_data[i+j] << j) | pattern
-    
-            tx_bram_list.append(pattern)
-        
-        #puts the list into a csv file with name self.text_name
-        pd.DataFrame(tx_bram_list).to_csv(self.text_name, index=False, header=False)
         
         return quant_data
+    
+    def make_ideal_chirp(self, verbose = True):
+        
+        quant_data = self.__make_waveform(plot_en = verbose)
+        
+        chirp_analysis = chirp_spectrum_analysis(F_sample = self.F_sample, F_center = self.F_center, B_chirp = self.B_chirp, T_chirp = self.T_chirp)
+        xf, R_dB = chirp_analysis.get_power(data_in = quant_data, verbose = True)
+        
+        return xf, R_dB, quant_data
         
             
 ###############################################################################
@@ -376,7 +367,7 @@ class chirp_spectrum_analysis:
 # is the chirp time duration, and text_name is where the txbram_data is saved to.
 # The text file text_name should then be scp'd to the zcu102.
 ###############################################################################
-class generate_ideal_chirp(chirp_wave, chirp_spectrum_analysis):
+class generate_ideal_chirp(chirp_wave):
     
     F_sample = 0
     N_sample = 0
@@ -397,17 +388,59 @@ class generate_ideal_chirp(chirp_wave, chirp_spectrum_analysis):
         self.T_chirp = T_chirp 
         self.K_chirp = B_chirp/T_chirp
         self.text_name = text_name
+        
+    ###############################################################################
+    # Takes in data - a numpy array - and puts the data in 40 bit chunks in the text_name
+    # file to be used for the loading data into the txbram on the zcu102. The input data is
+    # a numpy array consisting of a square wave whose amplitude ranges from [-32767, 32767].  
+    ###############################################################################        
+    def make_txbram_pattern(self, data):
+        
+        # create tx_bram_list to put in the 40 bit chunks of data
+        tx_bram_list = []
+        
+        # loop that increments by 80.  Since devmem write is constrained to 64 bit chunks, 
+        # I append 64 bit chunk into the list then the remainaing 16 bit chunk of data.  
+        # Then put.sh puts the first chunk at eg 0x80010000 increments the address by 64 bits (8bytes) 
+        # and puts the remaining 16 bits at 0x8001000C.
+        for i in range(0,len(data), 80):
+             
+            #bitshift data by index j and collect in pattern
+            pattern = 0
+            for j in range(64):
+                try:
+                    pattern = (data[i+j] << j) | pattern
+                except:
+                    break
+        
+            # append pattern to the list
+            tx_bram_list.append(pattern)
+            
+            #bitshift data by index j and collect in pattern
+            pattern = 0
+            for j in range(16):
+                try:
+                    pattern = (data[i+j+64] << j) | pattern
+                except:
+                    break
+        
+            # append pattern to the list
+            tx_bram_list.append(pattern)
+            
+        #puts the list into a csv file with name self.text_name
+        pd.DataFrame(tx_bram_list).to_csv(self.text_name, index=False, header=False)
      
     ###############################################################################
     # Takes the args from constructor and creates a quantized and plots the chirp.  It
     # returns xf (frequency) and R (power) of FFT plot.
     ###############################################################################
-    def make_ideal_chirp(self, verbose = False):
+    def make_waveform(self, verbose = True):
     
-        quantized_data = self.make_waveform(verbose = False)
-        xf, R = self.get_power(quantized_data, verbose = True)
+        xf, R_dB, data = self.make_ideal_chirp(verbose = verbose)
         
-        return xf, R, quantized_data
+        self.make_txbram_pattern(data)
+        
+        return xf, R_dB, data
     
 ###############################################################################
 # ADRV9009_Data deals is a parent class that helps to get a handle, Write/Read to the ADRV9009 DAC/ADC
@@ -646,7 +679,7 @@ class Collect_HDF5:
             if(elem_type == str):
                 elem_type = '|S'
             elif(elem_type == int):
-                elem_type = np.uint64
+                elem_type = np.int64
     
             #apply the type of the zeroth value of elem to the column elem
             df_out[elem] = df_out[elem].astype(str).astype(elem_type)

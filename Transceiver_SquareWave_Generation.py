@@ -207,7 +207,7 @@ class Square_Wave(GenerateSinewaves):
         self.N = N
         self.F_in = F_in
         self.text_name = text_name
-        
+    
     ###############################################################################
     # Takes in data - a numpy array - and puts the data in 40 bit chunks in the text_name
     # file to be used for the loading data into the txbram on the zcu102. The input data is
@@ -223,12 +223,15 @@ class Square_Wave(GenerateSinewaves):
         # create tx_bram_list to put in the 40 bit chunks of data
         tx_bram_list = []
         
-        # loop that increments by 40
-        for i in range(0,len(data), 40):
+        # loop that increments by 80.  Since devmem write is constrained to 64 bit chunks, 
+        # I append 64 bit chunk into the list then the remainaing 16 bit chunk of data.  
+        # Then put.sh puts the first chunk at eg 0x80010000 increments the address by 64 bits (8bytes) 
+        # and puts the remaining 16 bits at 0x8001000C.
+        for i in range(0,len(data), 80):
              
             #bitshift data by index j and collect in pattern
             pattern = 0
-            for j in range(40):
+            for j in range(64):
                 try:
                     pattern = (data[i+j] << j) | pattern
                 except:
@@ -237,10 +240,20 @@ class Square_Wave(GenerateSinewaves):
             # append pattern to the list
             tx_bram_list.append(pattern)
             
+            #bitshift data by index j and collect in pattern
+            pattern = 0
+            for j in range(16):
+                try:
+                    pattern = (data[i+j+64] << j) | pattern
+                except:
+                    break
+        
+            # append pattern to the list
+            tx_bram_list.append(pattern)
+            
         #puts the list into a csv file with name self.text_name
         pd.DataFrame(tx_bram_list).to_csv(self.text_name, index=False, header=False)
-           
-            
+        
     ###############################################################################
     # main method in this class.  Makes an ideal square wave given the params in the 
     # global vars and parses the output waveform into 40 bit chunks for the txbram.  
@@ -253,4 +266,3 @@ class Square_Wave(GenerateSinewaves):
         self.make_txbram_pattern(data)
         
         return xf, R_dB, data
-    

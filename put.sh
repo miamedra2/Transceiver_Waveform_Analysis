@@ -50,9 +50,9 @@ devmem 0x80000000 32 0x34
 while :
 do 
   status=$(devmem 0x80000020)
-  bitstatus=$((((status >> 4)) & 0x3))
+  bitstatus=$((((status >> 5)) & 0x1))
   printf "0x%x: 0x%x\n" 0x80000020 $status
-  if [ $bitstatus == 3 ]
+  if [ $bitstatus == 1 ]
   then
     echo "Bit Status Changed"
     break
