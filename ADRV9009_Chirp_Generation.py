@@ -111,16 +111,11 @@ class chirp_wave():
     
         if(bits <= 16 and bits > 1):
         
-            bits = bits - 1
-            quant = max(data_i)/(2**bits-1)
-    
-            data_i = np.round(data_i/quant)
-            data_q = np.round(data_q/quant)
-
-            max_val = max(data_i)
-    
-            data_quant_i = [int(amplitude*0.5*elem/max_val) for elem in data_i]
-            data_quant_q = [int(amplitude*0.5*elem/max_val) for elem in data_q]
+            x_N = list(np.round(data_i * (2**(bits-1)-1))) 
+            data_quant_i = [int(elem) << (16-bits) for elem in x_N]
+            
+            x_N = list(np.round(data_q * (2**(bits-1)-1))) 
+            data_quant_q = [int(elem) << (16-bits) for elem in x_N]
         elif(bits == 1):
             #normalizes the chirp to 1 and then rounds (0,1) and casts each elem to an int to get a list   
             data_quant_i = [amplitude*(elem - 0.5) for elem in np.round(0.5*(data_i+1))]
