@@ -1,6 +1,0 @@
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	Board: ZCU102
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	Revision: Rev. 1.0
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	Silicon: PROD
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	Serial Number: 881415021737-71788
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	MAC Address: 00:0A:35:04:8C:86
-[TITLE		:	Mon, 06, Aug 2018 13:37:25]	Working in directory: ZCU102

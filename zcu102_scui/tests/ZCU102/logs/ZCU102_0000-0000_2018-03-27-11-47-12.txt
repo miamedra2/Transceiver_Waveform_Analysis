@@ -1,7 +1,0 @@
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	Board: ZCU102
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	Revision: Rev. 1.0
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	Silicon: Prod
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	Serial Number: 0000-0000
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	MAC Address: 01:02:03:04:05:06
-[TITLE		:	Tue, 27, Mar 2018 11:47:30]	Working in directory: ZCU102
-[INFO		:	Tue, 27, Mar 2018 11:47:54]	['COM166', 'COM180', 'COM161', 'COM165', 'COM205', 'COM206', 'COM207']

@@ -1,195 +1,0 @@
-Board: ZCU102
-Serial Number: 0000-0000
-Mac Address: 01:02:03:04:05:06
-
-
-Info: SYS_CTLR v1.01 RESTORE test started...
-
-Info: The test will take 0 hours, 01 minutes, and 19 seconds. 0:01:19
-
-Entering step: 0
-
-
-Info: This step started at: 2017-10-30 18:12:16
-
-Entering step: 1
-
-
-Info: This step started at: 2017-10-30 18:12:16
-
-!! Press ESC to enter System Controller mode.
-
-User has confirmed: "Turn ZCU102 Board Power Off.
-Set mode switch SW6 to "0" (Up,Up,Up,Up)
-Connect two long jumpers:
-From J87 (PMOD1), Pin 1 to J92, Pin 11
-From J87 (PMOD1), Pin 3 to J92, Pin 8
-Turn ZCU102 Power On"
-
-step finished 
-
-Entering step: 2
-
-
-Info: This step started at: 2017-10-30 18:12:31
-after 2000
-
-catch { disconnect }
-1
-after 2000
-
-connect -url tcp:127.0.0.1:3121
-attempting to launch hw_server
-
-****** Xilinx hw_server v2017.3.1
-  **** Build date : Oct 20 2017-14:35:11
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-INFO: hw_server application started
-INFO: Use Ctrl-C to exit hw_server application
-
-
-
-****** Xilinx hw_server v2017.3.1
-
-  **** Build date : Oct 20 2017-14:35:11
-
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-
-
-INFO: hw_server application started
-
-INFO: Use Ctrl-C to exit hw_server application
-
-
-
-
-INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
-
-
-
-tcfchan#0
-targets -set -filter {name =~"*APU*"}
-
-rst -srst
-
-after 3000
-
-targets -set -filter {name =~"*APU*"}
-
-fpga -no-revision-check -file C:/zcu102_scui/flash_restore/tests/ZCU102/bitstream/boot_strap_loader.bit
-initializing  0%    0MB   0.0MB/s  ??:?? ETA  3%    0MB   1.8MB/s  ??:?? ETA  7%    1MB   1.8MB/s  ??:?? ETA 10%    2MB   1.7MB/s  ??:?? ETA 14%    3MB   1.7MB/s  ??:?? ETA 17%    4MB   1.7MB/s  ??:?? ETA 21%    5MB   1.7MB/s  00:11 ETA 24%    6MB   1.7MB/s  00:11 ETA 28%    7MB   1.7MB/s  00:10 ETA 32%    8MB   1.7MB/s  00:10 ETA 35%    9MB   1.7MB/s  00:09 ETA 39%    9MB   1.7MB/s  00:09 ETA 42%   10MB   1.7MB/s  00:08 ETA 46%   11MB   1.7MB/s  00:08 ETA 49%   12MB   1.7MB/s  00:07 ETA 52%   13MB   1.7MB/s  00:07 ETA 56%   14MB   1.7MB/s  00:06 ETA 59%   15MB   1.7MB/s  00:06 ETA 63%   16MB   1.7MB/s  00:05 ETA 66%   16MB   1.7MB/s  00:05 ETA 70%   17MB   1.7MB/s  00:04 ETA 73%   18MB   1.7MB/s  00:04 ETA 77%   19MB   1.7MB/s  00:03 ETA 80%   20MB   1.6MB/s  00:03 ETA 84%   21MB   1.7MB/s  00:02 ETA 88%   22MB   1.7MB/s  00:01 ETA 91%   23MB   1.7MB/s  00:01 ETA 94%   23MB   1.7MB/s  00:00 ETA 98%   24MB   1.7MB/s  00:00 ETA100%   25MB   1.6MB/s  00:15    
-
-targets -set -filter {name =~"*APU*"}
-
-source C:/zcu102_scui/flash_restore/tests/ZCU102/tcl/bsl_psu_init.tcl
-
-psu_init
-
-after 1000
-
-psu_ps_pl_isolation_removal
-
-after 1000
-
-psu_ps_pl_reset_config
-
-targets -set -filter {name =~"*A53*0"}
-
-rst -processor
-
-dow C:/zcu102_scui/flash_restore/tests/ZCU102/elf/boot_strap_loader.elf
-Downloading Program -- C:/zcu102_scui/flash_restore/tests/ZCU102/elf/boot_strap_loader.elf
-	section, .text: 0x00000000 - 0x0001442f
-	section, .init: 0x00014440 - 0x00014473
-	section, .fini: 0x00014480 - 0x000144b3
-	section, .note.gnu.build-id: 0x000144b4 - 0x000144d7
-	section, .rodata: 0x000144d8 - 0x00014dcf
-	section, .rodata1: 0x00014dd0 - 0x00014dff
-	section, .sdata2: 0x00014e00 - 0x00014dff
-	section, .sbss2: 0x00014e00 - 0x00014dff
-	section, .data: 0x00014e00 - 0x00015fe7
-	section, .data1: 0x00015fe8 - 0x00015fff
-	section, .ctors: 0x00016000 - 0x00015fff
-	section, .dtors: 0x00016000 - 0x00015fff
-	section, .eh_frame: 0x00016000 - 0x00016003
-	section, .mmu_tbl0: 0x00017000 - 0x0001700f
-	section, .mmu_tbl1: 0x00018000 - 0x00019fff
-	section, .mmu_tbl2: 0x0001a000 - 0x0001dfff
-	section, .preinit_array: 0x0001e000 - 0x0001dfff
-	section, .init_array: 0x0001e000 - 0x0001e007
-	section, .fini_array: 0x0001e008 - 0x0001e047
-	section, .sdata: 0x0001e048 - 0x0001e07f
-	section, .sbss: 0x0001e080 - 0x0001e07f
-	section, .tdata: 0x0001e080 - 0x0001e07f
-	section, .tbss: 0x0001e080 - 0x0001e07f
-	section, .bss: 0x0001e080 - 0x0011e2bf
-	section, .heap: 0x0011e2c0 - 0x001262bf
-	section, .stack: 0x001262c0 - 0x0012f2bf
-  0%    0MB   0.0MB/s  ??:?? ETA 79%    0MB   0.2MB/s  ??:?? ETA100%    0MB   0.2MB/s  00:00    
-Setting PC to Program Start Address 0x00000000
-Successfully downloaded C:/zcu102_scui/flash_restore/tests/ZCU102/elf/boot_strap_loader.elf
-
-con
-
-step finished 
-
-Entering step: 3
-
-
-Info: This step started at: 2017-10-30 18:13:00
-||||||||||||||||||||
-File sent successfully
-|||||||||||||||||||
-System controller programmed successfully
-step finished 
-
-Entering step: 4
-
-
-Info: This step started at: 2017-10-30 18:13:31
-
-!! Power Advantage Demo v1.00
-
-!! Press ESC to enter System Controller mode.
-
-User has confirmed: "Remove the long jumpers and Cycle ZCU102 Board Power."
-
-step finished 
-
-Entering step: 5
-
-
-Info: This step started at: 2017-10-30 18:13:41
-
-****** Vivado v2017.3.1_AR69928 (64-bit)
-  **** SW Build 2035080 on Fri Oct 20 14:20:01 MDT 2017
-  **** IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-source {tcl\five_second_delay.tcl}
-# after 5000
-INFO: [Common 17-206] Exiting Vivado at Mon Oct 30 18:13:55 2017...
-step finished 
-
-Entering step: 6
-
-
-Info: This step started at: 2017-10-30 18:13:55
-Writing: '\x1b'
-Writing: '\x08'
-[('', 'VRN', '', '')]Writing: '\t'
-:RWriting: 'VRN\r\t'
-'\r\n!! Press ESC to enter System Controller mode.\r\n\r\n!! Power Advantage Demo v1.00\r\n\r\n!! Press ESC to enter System Controller mode.\r\n\x08:R\r'VRN:PMSP v1.01 I2C Bridge v1.00
-step finished 
-
-Info: Result for step 0: Pass
-Info: Result for step 1: Pass
-Info: Result for step 2: Pass
-Info: Result for step 3: Pass
-Info: Result for step 4: Pass
-Info: Result for step 5: Pass
-Info: Result for step 6: Pass
-
-Info: The test took 0 hours, 01 minutes, and 20 seconds. 0:01:20

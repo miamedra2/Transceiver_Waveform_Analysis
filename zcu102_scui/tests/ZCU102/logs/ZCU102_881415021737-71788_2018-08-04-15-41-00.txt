@@ -1,6 +1,0 @@
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	Board: ZCU102
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	Revision: Rev. 1.0
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	Silicon: ES2
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	Serial Number: 881415021737-71788
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	MAC Address: 00:0A:35:04:8C:86
-[TITLE		:	Sat, 04, Aug 2018 15:41:20]	Working in directory: ZCU102
