@@ -1,0 +1,1144 @@
+% -----------------------------------------------------------------------------
+% software_install_notes.tex
+%
+% 12/23/2019 D. W. Hawkins (David.W.Hawkins@jpl.nasa.gov)
+%
+% Software Install Notes.
+%
+% -----------------------------------------------------------------------------
+% Document preamble
+% -----------------------------------------------------------------------------
+%
+\documentclass[10pt,twoside]{article}
+
+% Math symbols
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Headers/Footers
+\usepackage{fancyhdr}
+
+% Colors
+\usepackage{color}
+\usepackage{xcolor}
+\definecolor{darkgreen}{rgb}{0,0.4,0}
+
+% Importing and manipulating graphics
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{pdflscape}
+
+% Misc packages
+\usepackage{verbatim}
+\usepackage{dcolumn}
+\usepackage{ifpdf}
+\usepackage{enumerate}
+
+% PDF Bookmarks and hyperref stuff
+\usepackage[
+  bookmarks=true,
+  bookmarksnumbered=true,
+  colorlinks=true,
+  filecolor=blue,
+  linkcolor=blue,
+  urlcolor=blue,
+  hyperfootnotes=true
+  citecolor=blue
+]{hyperref}
+
+% Improved citation handling
+% (include after the hyperref stuff)
+\usepackage{cite}
+
+% Pretty printing code
+\usepackage{listings}
+
+% -----------------------------------------------------------------------------
+% Setup the margins
+% -----------------------------------------------------------------------------
+% Footer Template
+
+% Set left margin - The default is 1 inch, so the following
+% command sets a 1.25-inch left margin.
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{0.25in}
+
+% Set width of the text - What is left will be the right
+% margin. In this case, right margin is
+% 8.5in - 1.25in - 6in = 1.25in.
+\setlength{\textwidth}{6in}
+
+% Set top margin - The default is 1 inch, so the following
+% command sets a 0.75-inch top margin.
+%\setlength{\topmargin}{-0.25in}
+\setlength{\topmargin}{-0.2in}
+
+% Set height of the header
+\setlength{\headheight}{0.3in}
+
+% Set vertical distance between the header and the text
+\setlength{\headsep}{0.2in}
+
+% Set height of the text
+\setlength{\textheight}{8.5in}
+
+% Set vertical distance between the text and the
+% bottom of footer
+\setlength{\footskip}{0.4in}
+
+% -----------------------------------------------------------------------------
+% Allow floats to take up more space on a page.
+% -----------------------------------------------------------------------------
+
+% see page 142 of the Companion for this stuff and the
+% documentation for the fancyhdr package
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.95}
+% dont make this too small
+\renewcommand{\floatpagefraction}{0.35}
+\setcounter{totalnumber}{5}
+
+% Make sure the top/bottom rules appear on the page
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% ------------------------------------------------------------------------------
+% Set up the header/footer
+% ------------------------------------------------------------------------------
+%
+% First page
+% - set the head/foot rule width to zero to hide them
+\fancypagestyle{plain}{
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\fancyhf{}
+	\fancyfoot[C]{\footnotesize\bf The technical data in this document is
+controlled under the U.S. Export Regulations;\newline
+release to foreign persons may require an export authorization.}
+}
+
+% All other pages
+\lhead{Software Install Notes}
+\chead{}
+\rhead{\today}
+\lfoot{}
+\cfoot{\footnotesize\bf The technical data in this document is
+controlled under the U.S. Export Regulations;\newline
+release to foreign persons may require an export authorization.}
+\rfoot{\thepage}
+
+
+% =============================================================================
+% Document contents
+% =============================================================================
+%
+\begin{document}
+\title{Software Install Notes}
+\author{David W. Hawkins (David.W.Hawkins@jpl.nasa.gov)\\\textcolor{red}{Version 0.1}}
+\date{\today}
+
+% Title page
+\maketitle
+
+% Table of contents
+\tableofcontents
+
+% Switch to the fancy page style
+\pagestyle{fancy}
+
+% Start the first section on an odd page
+\cleardoublepage
+%\clearpage
+
+% =============================================================================
+% Main Document
+% =============================================================================
+%
+% =============================================================================
+\section{Introduction}
+% =============================================================================
+
+This document contains software installation notes for my JPL development
+machines.
+
+
+\clearpage
+% =============================================================================
+\section{Development Machines}
+% =============================================================================
+
+The following are details of my JPL development machines.
+
+\vskip5mm
+\noindent{\bf LMC-049267} (retired/returned 1/1/2020)
+\begin{itemize}
+\item Provider: Lockheed Martin Corporation (LMC)
+\item Operating System: Windows 7 Enterprise (64-bit) Service Pack 1
+\item Ethernet MAC: 9C-EB-E8-20-E9-62
+\item Ethernet IP: 137.78.253.177
+\item WiFi MAC: CC-3D-82-F4-40-39
+\item WiFi IP: 137.79.220.132
+\item Windows Product ID: 00392-918-5000002-85349
+\item Processor: Intel Core i7-4712HQ CPU @2.30GHz
+\item RAM: 16GB
+\end{itemize}
+
+\vskip5mm
+\noindent{\bf MT-210792} (received 12/16/2019)
+\begin{itemize}
+\item Provider: ManTech
+\item System Model: Dell Precision 7540
+\item Operating System: Windows 10 Enterprise
+\item OS Version: 10.0.18632 Build 8632
+\item Ethernet MAC:
+\item Ethernet IP:
+\item WiFi MAC:
+\item WiFi IP:
+\item Windows Product ID:
+\item Processor: Intel Core i9-9980HK CPU @2.40GHz
+\item RAM: 64GB
+\item UEFI Secure Boot: On
+\end{itemize}
+
+The UEFI Secure Boot setting needs to be changed to off when working with
+FPGA boards attached to the laptop via a Thunderbolt 3 to PCIe bridge.
+Ubuntu can be booted with UEFI Secure Boot enabled, however, Linux places
+the kernel in lockdown mode, and disables hardware access via
+\verb+/dev/mem+ and PCI BARs, making it hard to develop PCIe device drivers.
+
+Windows 10 will not boot with without Secure Boot enabled, so the BIOS
+setting needs to be changed back after booting Ubuntu for PCIe development.
+
+\clearpage
+% =============================================================================
+\section{Operating Systems}
+% =============================================================================
+
+%------------------------------------------------------------------------------
+\subsection{Windows 7/10}
+%------------------------------------------------------------------------------
+
+Install all tools into \verb+c:/software+, so that it is clear what has
+been custom installed into the machine.
+
+%------------------------------------------------------------------------------
+\subsection{Linux}
+%------------------------------------------------------------------------------
+
+Users would typically install custom tools into \verb+/opt+, however, for VMs
+it is convenient to install tools onto a separate virtual drive, so that the
+drive can be mounted on multiple VMs, eg., both Centos and Ubuntu.
+Since \verb+/opt+ is already in use on most Linux distros, the tools
+should be installed on a different mount point, eg., \verb+/software+.
+
+% =============================================================================
+\section{Environment Variables (Licensing)}
+% =============================================================================
+
+\begin{verbatim}
+MGLS_LICENSE_FILE    = 2020@cae-lm-mentor1
+XILINXD_LICENSE_FILE = 2200@cae-lmgr1,2200@cae-lmgr2,2200@cae-lmgr3
+SNPSLMD_LICENSE_FILE = 9998@cae-lmgr1,9998@cae-lmgr2,9998@cae-lmgr3
+\end{verbatim}
+
+\clearpage
+% =============================================================================
+\section{Development Tools Support}
+% =============================================================================
+
+%------------------------------------------------------------------------------
+\subsection{Mentor/Siemens Support Site}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Support site:
+\href{https://support.sw.siemens.com/en-US/signin}{https://support.sw.siemens.com/en-US/signin}
+\item Site ID: 15208
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Synplify Support Site}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Support site:
+\href{https://solvnet.synopsys.com}{https://solvnet.synopsys.com}
+\item Site ID: 1993
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx}
+%------------------------------------------------------------------------------
+
+Download site:
+\href{https://www.xilinx.com/support/download.html}{https://www.xilinx.com/support/download.html}
+
+\vskip5mm
+\noindent{\bf Xilinx ISE 13.2 download}:
+%
+\begin{itemize}
+
+\item Under \emph{Version}, click on the \emph{ISE Archive} link.
+\item Click on the ISE 13.2 link.
+\item Download \emph{ISE Design Suite - 13.2 Full Product Installation}, \emph{All Platforms}
+
+\href{https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_ISE_DS_13.2_O.61xd.0.0.tar}{Xilinx\_ISE\_DS\_13.2\_O.61xd.0.0.tar}
+
+\item Download \emph{Software Development Kit - 13.2 Full Product Installation}, \emph{All Platforms}
+
+\href{https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_SDK_13.2_O.61xd.0.0.tar}{Xilinx\_SDK\_13.2\_O.61xd.0.0.tar}
+\end{itemize}
+
+\vskip5mm
+\noindent{\bf Xilinx ISE 14.7 download}:
+\begin{itemize}
+\item Under \emph{Version}, click on the \emph{ISE Archive} link.
+\item The archive link \emph{14.7 Windows 10} is for an ISE version that
+only supports Spartan-6 devices.
+\item Click on the \emph{14.7} link (below the \emph{14.7 Windows 10} link).
+\item Download \emph{ISE Design Suite - 14.7 Full Product Installation}, \emph{Full DVD Single File Download Image}
+
+\href{https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_ISE_DS_14.7_1015_1.tar}{Xilinx\_ISE\_DS\_14.7\_1015\_1.tar}
+
+\end{itemize}
+
+\vskip5mm
+\noindent{\bf Vivado 2019.2 download}:
+\begin{itemize}
+\item From the main download page scroll down to \emph{Vivado HLx 2019.2: All OS installer Single-File Download}
+(26.55GB) and download
+
+\href{https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Vivado_2019.2_1106_2127.tar.gz}{Xilinx\_Vivado\_2019.2\_1106\_2127.tar.gz}
+
+\item Download Update 1 (9.03GB)
+
+\href{https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Vivado_Vitis_Update_2019.2.1_1205_0436.tar.gz}{Xilinx\_Vivado\_Vitis\_Update\_2019.2.1\_1205\_0436.tar.gz}
+
+\end{itemize}
+
+\clearpage
+% =============================================================================
+\section{Windows Installation Notes}
+% =============================================================================
+
+%------------------------------------------------------------------------------
+\subsection{Cygwin}
+%------------------------------------------------------------------------------
+
+Install the 64-bit version of Cygwin
+%
+\begin{itemize}
+\item Install into \verb+c:\cygwin64+
+\item Change the package directory to \verb+c:\cygwin64\packages+
+\item Select a mirror, eg., \verb+http://mirrors.xmission.com+
+\item Change the \emph{View} pull-down to full.
+\item Browse and add packages, eg.,
+%
+\begin{itemize}
+\item gcc-g++ 7.4.0-1
+\item git 2.21.0-1
+\item make 4.2.1-2
+\item libreadline-dev 7.0.3-3 (libreadline7 7.0.3-3 was already selected)
+\item tree 1.7.0-1
+\item vim 8.1.1772-1
+\end{itemize}
+%
+\end{itemize}
+
+After Cygwin installation \verb+git --version+ is 2.21.0, \verb+gcc --version+ is
+7.4.0, and \verb+make --version+ is 4.2.1.
+
+\vskip5mm
+\noindent{\bf Cygwin TODO}:
+\begin{itemize}
+\item Install the Cygwin packages for HDF5 and NetCDF or build from scratch
+(since the Cygwin packages are too old)?
+\item Git LFS (requires a separate Windows installation tool)
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Cygwin ssh keys}
+%------------------------------------------------------------------------------
+
+Run \verb+ssh-keygen+ to generate ssh keys and copy the public
+key in \verb+.ssh/id_rsa.pub+ to your JPL github account.
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{Mentor QuestaSim 2019.4}
+%------------------------------------------------------------------------------
+
+The Windows installation of the Questa Verification IP Suite only supports
+the 32-bit version of QuestaSim.
+%
+\begin{itemize}
+%-------------------------------
+\item Install QuestaSim 32-bit
+%-------------------------------
+%
+\begin{itemize}
+\item Run \verb+questasim-win32-2019.4.exe+
+\item Install to \verb+c:\software\mentor\questasim_2019.4+
+\item Do not add a desktop shortcut
+\item Do not add the tool to the path
+\item Do not install the hardware security key driver
+\item When the installer completes, it opens the licensing setup tool.
+Just close it.
+\item Setup the environment variable \verb+MGLS_LICENSE_FILE+.
+\item Start the tool from the Windows start menu and confirm it works, eg.,
+\begin{verbatim}
+QuestaSim> vsim -version
+# Questa Sim  vsim 2019.4 Simulator 2019.10 Oct 15 2019
+\end{verbatim}
+\end{itemize}
+%
+%-------------------------------
+\item Install gcc 32-bit
+%-------------------------------
+%
+\begin{itemize}
+\item Unzip \verb+questasim-win32-gcc-4.2.1-mingw32vc12.zip+
+\item Move the folder \verb+gcc-4.2.1-mingw32vc12+ to \verb+C:\software\mentor\questasim_2019.4+
+\end{itemize}
+%
+%------------------------------------
+\item Install Register Assistant (UVM)
+%-------------------------------------
+\begin{itemize}
+\item Run \verb+regassistuvm_2019.4_win.exe+
+\item Selecting the QuestaSim installation \verb+c:\software\mentor\questasim_2019.4+
+to install the tool into \verb+c:\software\mentor\questasim_2019.4\RUVM_2019.4+
+\item Complete the installation
+\end{itemize}
+\item Install size (\verb+C:\software\mentor\questasim_2019.4+): 1.92GB
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Mentor Questa Verification IP 2019.4}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Run \verb+setup.exe+
+\item The Mentor software installer will indicate the correct source folder,
+but the destination folder will be wrong (it will be the last place you
+installed a Mentor product).
+\item Change the installation folder to
+\verb+c:\software\mentor\questasim_vip_2019.4+
+\item Complete the installation
+\item Install size (\verb+C:\software\mentor\questasim_vip_2019.4+): 1.97GB
+\end{itemize}
+
+The QVIP installation also includes PCIe design examples
+(\verb+2019.4_PCIE_starter_kit.tar.gz+) for Xilinx and Altera IP cores.
+These do not need to be installed, but should be a useful resource for
+PCIe development.
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{Mentor Questa and QVIP Setup}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Define the environment variables
+
+\verb+QUESTA_HOME = c:/software/mentor/questasim_2019.4+
+
+\verb+QUESTA_MVC_HOME = c:/software/mentor/questasim_vip_2019.4+
+
+\item Edit the QuestaSim file
+
+\verb+c:/software/mentor/questasim_2019.4/modelsim.ini+
+
+and change \verb+MvcHome = $MODEL_TECH/..+ to \verb+MvcHome = $QUESTA_MVC_HOME+.
+
+The file is read-only, so will need to be made read/write before editing,
+and then set back to read-only after editing.
+\end{itemize}
+
+Test the Questa and QVIP setup by running one of the AXI4-Stream tutorial
+examples. For example, under my Windows 7 machine, the multiply-add example
+output was
+%
+\begin{verbatim}
+# Compiling C:/Users/dhawkins/AppData/Local/Temp\dhawkins@LMC-049267_dpi_3364\
+win32_gcc-4.2.1\exportwrapper.c
+# Loading C:/Users/dhawkins/AppData/Local/Temp\dhawkins@LMC-049267_dpi_3364\
+win32_gcc-4.2.1\vsim_auto_compile.dll
+# Loading C:/software/mentor/questasim_2019.4/uvm-1.2\win32\uvm_dpi.dll
+# Loading c:/software/mentor/questasim_vip_2019.4/questa_mvc_core/win32_gcc-4.2.1/
+libaxi4stream_IN_SystemVerilog_MTI_full.dll
+#
+# //  Questa Verification IP
+# //  Version 2019.4_win : (axi4stream) 20191003 win32 10/17/2019:09:11
+# //
+# //  Copyright 2007-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+#
+# ** Note: (vsim-50000)
+# ----------------------------------------------------
+# MVC instances summary: MVCs 2, ends 8
+#     /top/master/axi4stream_master_if ( AXI4_ID_WIDTH = 1, AXI4_USER_WIDTH = 64,
+AXI4_DEST_WIDTH = 1, AXI4_DATA_WIDTH = 64 ) { master:1 slave:1 clock_source:1 reset_source:1 }
+#     /top/slave/axi4stream_slave_if ( AXI4_ID_WIDTH = 1, AXI4_USER_WIDTH = 64,
+AXI4_DEST_WIDTH = 1, AXI4_DATA_WIDTH = 64 ) { master:1 slave:1 clock_source:1 reset_source:1 }
+# ----------------------------------------------------
+#
+\end{verbatim}
+%
+This output shows the Questa and QVIP 2019.4 paths, and confirms gcc-4.2.1 works.
+The output under my Windows 10 machine was very similar (the machine name in the
+messages changed from LMC-049267 to MT-210792).
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{Mentor HDL Designer Series 2019.4}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Run \verb+HDS_2019.4_win.exe+
+\item Install to
+\verb+c:\software\mentor\HDS_2019.4+
+\item Install size (\verb+c:\software\mentor\HDS_2019.4+): 1.54GB
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx ISE 13.2}
+%------------------------------------------------------------------------------
+
+Xilinx ISE 13.2 is not officially supported by Xilinx under Windows 10,
+however, the Xilinx Answer Record
+\href{https://www.xilinx.com/support/answers/62380.html}{AR\#62380: ISE
+Install - Guide to Installing and Running ISE 10.1 or 14.7 on a Windows
+8.1 or Windows 10 machine} contains the steps needed to get the tool
+working. The \verb+libportability+ DLL fix needs to be applied to
+four directories for ISE 13.2 and ten directories for ISE 14.7.
+A Windows batch file to perform this operation exists on github
+for ISE 14.7
+%
+\href{https://github.com/cbureriu/xilinx-14.7-patch-for-Win10-32-64}
+{https://github.com/cbureriu/xilinx-14.7-patch-for-Win10-32-64}.
+A bash equivalent of this script was created that uses the XILINX
+environment variable to determine which version of the tool to update.
+
+Installation procedure:
+%
+\begin{itemize}
+\item Extract \verb+Xilinx_ISE_DS_13.2_O.61xd.0.0.tar+
+\item Run \verb+xsetup.exe+
+\item Accept the default installation of \emph{ISE Design Suite: System Edition}
+\item On the \emph{Select Installation Options} page, deselect all options,
+including the cable drivers. Xilinx Vivado is supported under Windows 10, so
+installation of that tool will install the correct cable drivers.
+\item Install to: \verb+c:\software\Xilinx\13.2+ (uncheck the option to
+import preferences from previous versions).
+\item Set the Xilinx license manager environment variable.
+\item Set the environment variable
+
+\verb+XILINX = C:/software/Xilinx/13.2/ISE_DS/ISE+
+
+\item Open a Cygwin terminal and run the bash
+script, \verb+xilinx_ise_win10_fix.sh+.
+\item Edit the PlanAhead desktop shortcut and start menu properties to add the 32-bit flag, \verb+-m32+.
+
+\item {\bf Licensing issue}: The ISE feature is not detected.
+
+The \emph{Xilinx License Configuration Manager} can be opened by
+selecting \emph{Help}$\rightarrow$\emph{Manage Licenses}. The
+\emph{Manage Xilinx Licenses} tab shows the licenses provided
+by the JPL CAE servers. Under Windows 7 this list has 70 entries:
+the \emph{Search Order} column lists the license entries from 02 to 71.
+The ISE feature is search order 060.
+
+The \emph{Server Name} under Windows 7 was \verb+2200@cae-lmgr1+, i.e., the
+first entry in the Xilinx license environment variable, and
+the \emph{File Name} was the value in the Xilinx environment variable. The
+Windows 10 machine had  \emph{Server Name} empty and
+\emph{File Name} set to \verb+c:\software\Xilinx\13.2\ISE_DS\EDK/data/core_licenses/Xilinx.lic+.
+This implies that the CAE license servers were not resolved correctly.
+
+Under Windows 10,
+\verb+ping cae-lmgr1+ and \verb+ping cae-lmgr1.jpl.nasa.gov+ did not
+resolve the server.
+Under Windows 7,
+\verb+ping cae-lmgr1+ resolved to \verb+cae-lm-prod2.jpl.nasa.gov+.
+Under Windows 10,
+\verb+ping cae-lm-prod2+ resolved correctly.
+
+{\bf Temporary work-around}: change \verb+XILINXD_LICENSE_FILE = 2200@cae-lm-prod2+
+
+\end{itemize}
+
+\clearpage
+%------------------------------------------------------------------------------
+% Xilinx ISE Help->About for 13.2 and 13.2 with SIRF overlay
+%------------------------------------------------------------------------------
+%
+\begin{figure}[t]
+  \begin{minipage}{0.5\textwidth}
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]
+    {figures/xilinx_ise_13_2_help_about.png}\\
+    (a) ISE 13.2
+    \end{center}
+  \end{minipage}
+  \hfil
+  \begin{minipage}{0.5\textwidth}
+    \begin{center}
+    \includegraphics[width=0.88\textwidth]
+    {figures/xilinx_ise_13_2_sirf_help_about.png}\\
+    (b) ISE 13.2 with SIRF overlay
+    \end{center}
+  \end{minipage}
+  \caption{Xilinx ISE \emph{Help}$\rightarrow$\emph{About} dialog for ISE 13.2
+  and ISE 13.2 with SIRF overlay.}
+  \label{fig:ise_sirf_overlay}
+\end{figure}
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx ISE 13.2 Virtex-5QV SIRF Overlay}
+%------------------------------------------------------------------------------
+
+SIRF overlay installation instructions:
+%
+\begin{itemize}
+\item Unzip \verb+sirf_overlay_13.2_2016_01_20.zip+ (the version I received
+from Xilinx in 2016)
+\item Navigate down a couple of folders into the unzipped archive.
+\item Unzip \verb+sirf_overlay_13_2_v12.zip+.
+The overlay folder contains \verb+ISE+ and \verb+PlanAhead+ folders.
+\item Copy the overlay folders into \verb+c:/software/Xilinx/13.2/ISE_DS+, so
+they replace the existing folders.
+
+\item Open a Cygwin terminal and re-run the bash script, \verb+xilinx_ise_win10_fix.sh+.
+\end{itemize}
+%
+Figure~\ref{fig:ise_sirf_overlay} shows the ISE
+\emph{Help}$\rightarrow$\emph{About} dialog for ISE 13.2,
+and for ISE 13.2 with SIRF overlay.
+
+%------------------------------------------------------------------------------
+\subsection{Build Xilinx ISE 13.2 Simulation Libraries}
+%------------------------------------------------------------------------------
+
+The following procedure was used to build the ISE 13.2 simulation libraries:
+%
+\begin{itemize}
+\item From the Windows 10 start menu open the 64-bit version of the
+\emph{Simulation Library Compilation Wizard} tool
+\item Select \verb+QuestaSim+
+\item Set the QuestaSim path to \verb+c:\software\mentor\questasim_2019.4\win32+
+\item Accept the remaining defaults and click \emph{Next}
+\item Accept the default \emph{Both VHDL and Verilog} and click \emph{Next}
+\item Uncheck all devices and then select \verb+Virtex5+ and \verb+Virtex-5QV+,
+and click \emph{Next}
+\item Uncheck the \verb+EDK Simulation Library+ (it takes a long time to build),
+and click \emph{Next}
+\item The output path for the compiled libraries should be
+(if it is not, then the Questasim path was not set correctly):
+
+\verb+c:\software\Xilinx\13.2\ISE_DS\ISE\<language>\<simulator>\<version>\<platform>+
+
+Click \emph{Launch Compile Process} to start the library compilation (which will fail).
+Exit the application (using the back buttons is not sufficient for the next steps).
+
+\item Library compilation fails due to the options present in the Xilinx ISE
+Questasim configuration file. The configuration file is generated by the
+first run through the library compilation process.
+
+\item Edit the file \verb+c:\software\Xilinx\13.2\ISE_DE\ISE\compxlib.cfg+
+and remove \verb+-novopt+ from within the file.
+
+\item Re-run the compilation wizard, and the \emph{Launch Compile Process}
+will run.
+\end{itemize}
+%
+Figure~\ref{fig:ise_libraries} shows the ISE 13.2 simulation libraries compilation summary.
+
+%------------------------------------------------------------------------------
+% Xilinx ISE Library Compilation Summary
+%------------------------------------------------------------------------------
+%
+\begin{figure}[t]
+\small
+\begin{minipage}{\textwidth}
+\begin{verbatim}
+**********************************************************************************************
+*                                   COMPILATION SUMMARY                                      *
+*                                                                                            *
+*  Simulator used: questa                                                                    *
+*  Compiled on: Tue Dec 24 12:12:15 2019                                                     *
+*                                                                                            *
+**********************************************************************************************
+*               Library                |  Lang   |  Mapped Name(s)   | Err#(s)  |  Warn#(s)  *
+*--------------------------------------------------------------------------------------------*
+*  secureip                            | verilog | secureip          | 0        | 0          *
+*--------------------------------------------------------------------------------------------*
+*  unisim                              | vhdl    | unisim            | 0        | 0          *
+*--------------------------------------------------------------------------------------------*
+*  unisim                              | verilog | unisims_ver       | 0        | 2          *
+*--------------------------------------------------------------------------------------------*
+*  simprim                             | vhdl    | simprim           | 0        | 0          *
+*--------------------------------------------------------------------------------------------*
+*  simprim                             | verilog | simprims_ver      | 0        | 2          *
+*--------------------------------------------------------------------------------------------*
+*  xilinxcorelib                       | vhdl    | xilinxcorelib     | 0        | 260        *
+*--------------------------------------------------------------------------------------------*
+*  xilinxcorelib                       | verilog | xilinxcorelib_ver | 0        | 4          *
+*--------------------------------------------------------------------------------------------*
+\end{verbatim}
+\end{minipage}
+\caption{Xilinx ISE 13.2 Library Compilation Summary.}
+\label{fig:ise_libraries}
+\end{figure}
+
+\vskip10mm
+\noindent{\bf RAMBo-FPGA build test}:
+\begin{itemize}
+\item Check out the RAMBo repo
+
+\verb+$ git clone --recursive git@github.jpl.nasa.gov:REASON-DES/RAMBo_FPGA.git+
+
+\item Change into the RAMBo directory and source the setup script
+
+\verb+$ cd RAMBo_FPGA+
+
+\verb+$ source setup.sh+
+
+Note: the script is sourced, not run via \verb+./setup.sh+, so that the
+environment variables are defined for the current bash shell.
+
+\item Change into the verif directory and run the smoke test
+
+\verb+$ cd verif+
+\verb+$ vrun smoke -rmdb regression.rmdb -vrmdata $RAMBO_DATADIR+
+
+\item Windows 10 will block the tool \verb+vrun.exe+ until you allow it.
+
+\item The smoke test takes about 10 minutes.
+
+\end{itemize}
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{Xilinx ISE 14.7}
+%------------------------------------------------------------------------------
+
+When I installed both ISE 13.2 and 14.7 under Windows 7, the ISE 13.2 Impact
+and ChipScope tools stopped working: they could not detect JTAG cables or
+devices. The 14.7 version worked correctly, so I assumed that the 14.7
+installation had done something to over-ride the 13.2 installation.
+For now, I have decided not to install 14.7 under Windows 10.
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx Vivado 2019.2}
+%------------------------------------------------------------------------------
+
+Installation procedure:
+%
+\begin{itemize}
+\item Copy the installation tar file to \verb+c:/temp+ and extract it
+(delete the files after installation)
+\item Run \verb+xsetup.exe+
+\item Accept the default tool \emph{Vivado HL System Edition}
+\item Install to \verb+c:/software/Xilinx+ (install for all users)
+\item The installation will also install DocNav, the Xilinx Documentation Navigator tool.
+\item Close the license manager GUI when it appears.
+No license setup is required, since the license setup for ISE
+also works for Vivado.
+\item The installer generates additional pop-up windows. If the installer
+appears to have stopped, move the main installer window to see if there
+is a pop-up waiting for user input.
+\item Create the environment variable
+
+\verb+VIVADO = c:/software/Xilinx/Vivado/2019.2+
+
+My Tcl scripts targeting devices supported by Vivado use this environment
+variable to locate the simulation libraries.
+
+\item {\bf TODO}: Install the software update?
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Build Xilinx Vivado Simulation Libraries}
+%------------------------------------------------------------------------------
+
+Run the compilation tool and have it place the libraries in
+
+\verb+C:\software\Xilinx\Vivado\2019.2\compile_simlib\questasim_32bit+
+
+\noindent It takes about 45 minutes to compile the simulation libraries.
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{MATLAB}
+%------------------------------------------------------------------------------
+
+Installation procedure:
+%
+\begin{itemize}
+\item Login to the JPL CAE portal:
+\href{https://opencae.jpl.nasa.gov/portal}{https://opencae.jpl.nasa.gov/portal}
+\item Select \emph{Tools}$\rightarrow$\emph{All Tools}
+\item Scroll down and click on the MATLAB link
+\item The MATLAB version is 2019a (the installer refers to it as MATLAB 9.6).
+\item The CAE portal page instructions are (along with my updated comments):
+\begin{itemize}
+\item Download the license file:
+\href{https://cae-artifactory.jpl.nasa.gov/artifactory/list/cae-tools-public/com/ECAE/MATLAB/license.dat}{license.dat}
+\item Download the 15.2GB installation package for Windows:
+\href{https://cae-artifactory.jpl.nasa.gov/artifactory/list/cae-tools-public/com/ECAE/MATLAB/2019/R2019a_Win.7z}{R2019a\_Win.7z}
+\newline(there are separate packages
+for Windows, Linux, and MACs)
+\item Extract the installer (do not extract to a USB drive as it takes too long)
+\item Edit the installer control file \verb+installer_input.txt+ to
+specify the installation path as \verb+c:/software/MATLAB/R2019a+
+\item Install MATLAB from a Windows Command prompt by running the command
+
+\verb+setup.exe -inputFile installer_input.txt+
+\item The installer will prompt for the license file.
+\item The installer runs for about 30 minutes.
+\end{itemize}
+
+\item MATLAB does not require a license environment variable.
+\end{itemize}
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{MATLAB Support Packages}
+%------------------------------------------------------------------------------
+
+\subsection*{\texttt{export\_fig}}
+
+The package \verb+export_fig+ is useful for generating PDF and PNG files from
+MATLAB. The figures generated by this package look a lot nicer than the 
+figures that MATLAB natively generates (the README.md for \verb+export_fig+
+describes many of the issues).
+%
+\begin{itemize}
+\item Install Ghostscript (eg., the 64-bit version);
+\href{https://www.ghostscript.com}{https://www.ghostscript.com}
+
+Install to \verb+cd c:/software/ghostscript+. The first time you run
+\verb+export_fig+ a dialog box will prompt you to point to this installation
+location (select the versioned folder within the install directory).
+
+\item Clone the git repo \verb+https://github.com/altmany/export_fig+.
+The repo can be cloned into the MATLAB installation directory, eg., 
+
+\begin{verbatim}
+$ cd c:/software/MATLAB
+$ git clone https://github.com/altmany/export_fig
+\end{verbatim}
+
+\item Add the repo path to your MATLAB 
+\href{https://www.mathworks.com/help/matlab/ref/startup.html}
+{\texttt{startup.m}} script. The MATLAB command \verb+userpath+
+returns the directory name where MATLAB searches for the for
+startup file. Under Windows, the path to the startup file was:
+
+\begin{verbatim}
+c:/Users/dhawkins/Documents/MATLAB/startup.m
+\end{verbatim}
+
+The startup script should look something like:
+%
+\begin{verbatim}
+if (~isdeployed)
+    addpath('c:/software/MATLAB/export_fig');
+end
+\end{verbatim}
+
+\item Start MATLAB, create a simple plot, and generate a PDF and PNG
+
+\begin{verbatim}
+x = 1:10;
+plot(x,x,'b')
+hold on
+plot(x,1-x,'r')
+xlabel('x-axis')
+ylabel('y-axis')
+title('Title')
+export_fig fig1.pdf -transparent
+export_fig fig1.png -m4 -transparent
+\end{verbatim}
+
+The \verb+-transparent+ option changes the grey background to transparent.
+The \verb+-m4+ option increases the number of pixels in the PNG.
+
+\end{itemize}
+
+
+\clearpage
+%------------------------------------------------------------------------------
+\subsection{Latex (MiKTeX)}
+%------------------------------------------------------------------------------
+
+I use Latex (MiKTeX) for documentation.
+
+\vskip5mm
+\noindent Installation procedure:
+%
+\begin{itemize}
+\item Web site: \href{https://miktex.org}{https://miktex.org}
+\item Download the latest 64-bit version:
+\href{https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/basic-miktex-2.9.7269-x64.exe}{basic-miktex-2.9.7269-x64.exe}
+\item Install to \verb+c:\software\MiKTeX+
+\item Allow MiKTek to check for updates and install any it finds.
+\item Process several of my Latex documents and install any missing packages.
+\end{itemize}
+
+
+%------------------------------------------------------------------------------
+\subsection{Inkscape}
+%------------------------------------------------------------------------------
+
+I use Inkscape for drawing block diagrams, timing diagrams, and state machines.
+
+\vskip5mm
+\noindent Installation procedure:
+%
+\begin{itemize}
+\item Web site: \href{https://inkscape.org}{https://inkscape.org}
+\item Download the latest 64-bit version (v0.92.4):
+\href{https://inkscape.org/gallery/item/13318/inkscape-0.92.4-x64.exe}{inkscape-0.92.4-x64.exe}
+\item Install to \verb+c:\software\inkscape+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{IrfanView}
+%------------------------------------------------------------------------------
+
+I use IrfanView (or sometimes Microsoft Paint) for manipulating and cropping
+screen captures.
+
+\vskip5mm
+\noindent Installation procedure:
+%
+\begin{itemize}
+\item Web site: \href{https://www.irfanview.com}{https://www.irfanview.com}
+\item Download the latest 64-bit version (v4.54):
+\verb+iview454_x64_setup.exe+
+\item Install to \verb+c:\software\irfanview+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{VirtualBox}
+%------------------------------------------------------------------------------
+
+I use VirtualBox for running Windows and Linux virtual machines.
+
+\vskip5mm
+\noindent Installation procedure:
+%
+\begin{itemize}
+\item Web site:
+\href{https://www.virtualbox.org/wiki/Downloads}{https://www.virtualbox.org/wiki/Downloads}
+\item Download and install the latest version (6.1.0)
+\item Also install the extensions pack (the link is on the download page).
+\item Install to \verb+c:\software\Oracle\VirtualBox+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Git LFS}
+%------------------------------------------------------------------------------
+
+Git LFS support can be added to Cygwin git by installing the Git LFS package.
+
+\vskip5mm
+\noindent Installation procedure:
+%
+\begin{itemize}
+\item Web site:
+\href{https://git-lfs.github.com}{https://git-lfs.github.com}
+\item Download file:
+\href{https://github.com/git-lfs/git-lfs/releases/download/v2.9.1/git-lfs-windows-v2.9.1.exe}
+{git-lfs-windows-v2.9.1.exe}
+\item Install to \verb+c:\software\git-lfs+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Anaconda (Python)}
+%------------------------------------------------------------------------------
+
+\begin{itemize}
+\item Install Anaconda
+
+Download and install the \emph{Individual Edition} (open source distribution) from
+%
+\begin{center}
+\href{https://www.anaconda.com/products/individual}{https://www.anaconda.com/products/individual}
+\end{center}
+%
+Select Python 3.7, 64-bit graphical installer (466MB). I ran the installer
+for all users (as adminstrator).
+
+Install into \verb+c:/software/Anaconda3+.
+
+After installation, the Spyder GUI indicated that an update was available, so
+I updated the Anaconda installation. 
+
+\item Update Anaconda.
+
+Start the conda console and issue the command
+
+\begin{verbatim}
+conda update anaconda
+\end{verbatim}
+
+This will update the installation, including the Spyder version.
+
+Note: when I ran this command under Windows 10 the console had a warning about handles that could not be deleted and a reboot was recommended. I rebooted and re-ran the conda command, and received the message
+
+\begin{verbatim}
+# All requested packages already installed.
+\end{verbatim}
+
+\item Install \verb+netcdf4+ 
+
+Per the installation procedure at \href{https://anaconda.org/anaconda/netcdf4}
+{https://anaconda.org/anaconda/netcdf4}, start the conda console and issue the 
+command
+
+\begin{verbatim}
+conda install -c anaconda netcdf4
+\end{verbatim}
+
+\item Import anaconda environment
+
+git clone the waveform analysis repo.  In the anaconda page select the Environments tab.  Then select import.  A dialog window called 'Import new environment' will open.  Select the file base$\_$env.yml in the waveform analysis repo and give the environment an appropriate name (eg zcu102$\_$adrv9009$\_$env).  Click okay and wait for the environment to be imported.  Since iio and adi are not tracked by conda, we'll use pip to install them in the new environment.
+
+\item Install \verb+libiio+ (for zcu102/adrv9009 setup)
+
+Per the installation procedure at the bottom of the page at \href{https://github.com/analogdevicesinc/libiio}{https://github.com/analogdevicesinc/libiio}, 
+download the primary installer package for Windows and run the executable.  On my machine, the executable installed libiio.dll in C:\textbackslash Windows\textbackslash System32 and iio.py in C:\textbackslash software\textbackslash Anaconda3\textbackslash pkgs\textbackslash libiio-0.21-py38he3d0fc9$\_$0\textbackslash Lib\textbackslash site-packages.  Now that the bindings have been installed in the terminal type:
+\begin{verbatim}
+pip install pylibiio
+\end{verbatim}
+This should put iio.py in the same directory as the other modules:  C:\textbackslash software\textbackslash Anaconda3\textbackslash lib\textbackslash site-packages \textbackslash iio.py
+Check that the module installed succesffuly by opening python and entering:
+\begin{verbatim}
+import iio
+\end{verbatim}
+
+\item Install \verb+pyadi-iio+
+
+Per the instructions at \href{https://wiki.analog.com/resources/tools-software/linux-software/pyadi-iio}{https://wiki.analog.com/resources/tools-software/linux-software/pyadi-iio} in Cygwin or in the python anaconda terminal (administrator mode)
+
+\begin{verbatim}
+cd C:/github
+git clone https://github.com/analogdevicesinc/pyadi-iio.git in C:/github/pyadi-iio.
+cd pyadi-iio
+python setup.py install
+\end{verbatim}
+
+Check that pyadi-iio was installed correctly.  In a python terminal enter
+
+\begin{verbatim}
+import adi
+\end{verbatim}
+
+\item Install \verb+peakdetect+
+
+In a python terminal enter:
+\begin{verbatim}
+pip install peakdetect
+\end{verbatim}
+
+Check that the module was installed correctly by entering
+
+\begin{verbatim}
+import peakdetect
+\end{verbatim}
+
+\item Ethernet Adapter settings
+
+To setup the ethernet adapter settings for the zcu102/adrv9009 setup, connect the ethernet and USB calbles from the zcu102 to your laptop.  Open a serial terminal to the OS on the zcu102.  On my computer, there exists COM3, COM4, COM5, and COM6.  The correct serial port is COM4.  When asked for username and password enter root and analog.  Then change the ethernet IP address to 192.168.1.21, eg.
+
+\begin{verbatim}
+ifconfig eth0 down
+ifconfig eth0 192.168.1.21 netmask 255.255.255.0
+\end{verbatim}
+
+Now put the laptop on the same subnet as the zcu102 OS.  Go to Control Panel\textbackslash Network and Internet\textbackslash Network Connections\textbackslash Ethernet (On my machine there's only one ethernet port).  Double click Ethernet and highlight Internet Protocol Version (TCP/IPv4).  Select Properties and a new dialog window called Internet Protocol Version 4 (TCP/IPv4) Properties should open.  Select Use the following IP address  and enter
+\begin{verbatim}
+IP address: 		192.168.1.10
+Subnet Mask: 		255.255.255.0
+Default Gateway:	192.168.1.1
+\end{verbatim}
+
+Click OK, to put the laptop on the same subnet as the zcu102.
+
+
+
+
+
+
+
+
+
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\subsection{Synopsys Synplify Pro and Premier}
+%------------------------------------------------------------------------------
+
+My Synopsys SolvNet account had expired, so I could not download the latest
+tools. I submitted a service request to re-enable SolvNet access.
+
+\clearpage
+% =============================================================================
+\section{VirtualBox Virtual Machines}
+% =============================================================================
+
+%------------------------------------------------------------------------------
+\subsection{Development Tools Virtual Drive (/software)}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+\subsection{Centos}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+\subsection{Ubuntu}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx Vivado 2019.2}
+%------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------
+\subsection{Xilinx PetaLinux 2019.2}
+%------------------------------------------------------------------------------
+
+\clearpage
+% =============================================================================
+\section{Full Ubuntu Installation on 64GB USB Drive}
+% =============================================================================
+
+\begin{itemize}
+\item Download Ubuntu Live ISO.
+\item Burn to USB using Rufus.
+\item Boot and install the full version onto USB.
+\end{itemize}
+
+Redo this, but download the ISO and boot a VM, and from there I should be
+able to install a full version onto USB directory.
+
+Create a list of tools to install;
+%
+\begin{itemize}
+\item gparted
+\item readline
+\item vim, gvim (gvim-gtk3)
+\item Kernel headers for device driver building
+\item Wireshark
+\end{itemize}
+
+%------------------------------------------------------------------------------
+\end{document}
+
