@@ -1,0 +1,49 @@
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	Traceback (most recent call last):
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "BoardUI.py", line 800, in <module>
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "BoardUI.py", line 98, in __init__
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "BoardUI.py", line 520, in loadCheckHash
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\main.py", line 685, in round_trip_load
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\main.py", line 636, in load
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\constructor.py", line 102, in get_single_data
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 75, in get_single_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 96, in compose_document
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 130, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 163, in compose_sequence_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 132, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 194, in compose_mapping_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\composer.py", line 106, in compose_node
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\parser.py", line 144, in check_event
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\parser.py", line 572, in parse_block_mapping_value
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 1620, in check_token
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 1662, in _gather_comments
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 301, in fetch_more_tokens
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 698, in fetch_double
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 707, in fetch_flow_scalar
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 1274, in scan_flow_scalar
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  File "site-packages\ruamel\yaml\scanner.py", line 1356, in scan_flow_scalar_non_spaces
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	ruamel.yaml.scanner
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	.
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	ScannerError
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	:
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	while scanning a double-quoted scalar
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  in "C:\zcu102_scui\tests\ZCU102\SC.yaml", line 1626, column 28
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	found unknown escape character 'M'
+[ERROR		:	Mon, 26, Mar 2018 13:29:29]	  in "C:\zcu102_scui\tests\ZCU102\SC.yaml", line 1626, column 84

@@ -1,0 +1,276 @@
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 13:00:19]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 13:00:22]	PRESSED: Get Board Name
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	
+											Running sysc func: <readeeprom:1:54:D0:10>
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'IW1\r54\rd0\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'IR1\r54\r10\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'5A43553130322020202020FFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	SYSC command returned: INTERP[ZCU102     ☐☐☐☐☐]LITERAL[5A43553130322020202020FFFFFFFFFF]
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:22]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\rd0\r\tIR1\r54\r10\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\rd0\r:P\rIR1\r54\r10\r:P\r5A43553130322020202020FFFFFFFFFF\r~~~\r:P\rINTERP[ZCU102     \u2610\u2610\u2610\u2610\u2610]LITERAL[5A43553130322020202020FFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:00:22]	Finished Get Board Name
+[TITLE		:	Mon, 26, Mar 2018 13:00:22]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:00:24]	PRESSED: Get Board Revision
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	
+											Running sysc func: <readeeprom:1:54:E0:03>
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'IW1\r54\re0\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'IR1\r54\r03\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'312E30\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	SYSC command returned: INTERP[1.0]LITERAL[312E30]
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:24]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\re0\r\tIR1\r54\r03\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\re0\r:P\rIR1\r54\r03\r:P\r312E30\r~~~\r:P\rINTERP[1.0]LITERAL[312E30]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:00:24]	Finished Get Board Revision
+[TITLE		:	Mon, 26, Mar 2018 13:00:24]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:00:25]	PRESSED: Get Serial Number
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	
+											Running sysc func: <readeeprom:1:54:00:20>
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'IW1\r54\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'IR1\r54\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	SYSC command returned: INTERP[0000-0000☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐]LITERAL[303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:25]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r00\r\tIR1\r54\r20\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r00\r:P\rIR1\r54\r20\r:P\r303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\rINTERP[0000-0000\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610]LITERAL[303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:00:25]	Finished Get Serial Number
+[TITLE		:	Mon, 26, Mar 2018 13:00:25]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:00:28]	PRESSED: Get MAC Address
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	
+											Running sysc func: <readeeprom:1:54:20:06>
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'IW1\r54\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'IR1\r54\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'010203040506\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	
+											Running sysc func: <literaleeprom:F>
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	SYSC command returned: LITERAL[010203040506]INTERP[☐☐☐☐☐☐]
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:00:28]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r20\r\tIR1\r54\r06\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r20\r:P\rIR1\r54\r06\r:P\r010203040506\r~~~\r:P\rLITERAL[010203040506]INTERP[\u2610\u2610\u2610\u2610\u2610\u2610]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:00:28]	Finished Get MAC Address
+[TITLE		:	Mon, 26, Mar 2018 13:00:28]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:03:27]	PRESSED: Get Board Name
+[INFO		:	Mon, 26, Mar 2018 13:03:27]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	
+											Running sysc func: <readeeprom:1:54:D0:10>
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'IW1\r54\rd0\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'IR1\r54\r10\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'5A43553130322020202020FFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	SYSC command returned: INTERP[ZCU102     ☐☐☐☐☐]LITERAL[5A43553130322020202020FFFFFFFFFF]
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:28]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\rd0\r\tIR1\r54\r10\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\rd0\r:P\rIR1\r54\r10\r:P\r5A43553130322020202020FFFFFFFFFF\r~~~\r:P\rINTERP[ZCU102     \u2610\u2610\u2610\u2610\u2610]LITERAL[5A43553130322020202020FFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:03:28]	Finished Get Board Name
+[TITLE		:	Mon, 26, Mar 2018 13:03:28]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:03:29]	PRESSED: Get Board Revision
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	
+											Running sysc func: <readeeprom:1:54:E0:03>
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'IW1\r54\re0\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'IR1\r54\r03\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'312E30\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	SYSC command returned: INTERP[1.0]LITERAL[312E30]
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:29]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\re0\r\tIR1\r54\r03\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\re0\r:P\rIR1\r54\r03\r:P\r312E30\r~~~\r:P\rINTERP[1.0]LITERAL[312E30]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:03:29]	Finished Get Board Revision
+[TITLE		:	Mon, 26, Mar 2018 13:03:29]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:03:30]	PRESSED: Get Serial Number
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	
+											Running sysc func: <readeeprom:1:54:00:20>
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'IW1\r54\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'IR1\r54\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	SYSC command returned: INTERP[881415021737-71775☐☐☐☐☐☐☐☐☐☐☐☐☐☐]LITERAL[3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:30]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r00\r\tIR1\r54\r20\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r00\r:P\rIR1\r54\r20\r:P\r3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\rINTERP[881415021737-71775\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610]LITERAL[3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:03:30]	Finished Get Serial Number
+[TITLE		:	Mon, 26, Mar 2018 13:03:30]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:03:53]	PRESSED: Get MAC Address
+[INFO		:	Mon, 26, Mar 2018 13:03:53]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	
+											Running sysc func: <readeeprom:1:54:20:06>
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'IW1\r54\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'IR1\r54\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'000A35048C85\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	
+											Running sysc func: <literaleeprom:F>
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	SYSC command returned: LITERAL[000A35048C85]INTERP[☐☐5☐☐☐]
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:54]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r20\r\tIR1\r54\r06\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r20\r:P\rIR1\r54\r06\r:P\r000A35048C85\r~~~\r:P\rLITERAL[000A35048C85]INTERP[\u2610\u26105\u2610\u2610\u2610]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:03:54]	Finished Get MAC Address
+[TITLE		:	Mon, 26, Mar 2018 13:03:54]	Finished
+[TITLE		:	Mon, 26, Mar 2018 13:03:55]	PRESSED: Get Serial Number
+[INFO		:	Mon, 26, Mar 2018 13:03:55]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	
+											Running sysc func: <readeeprom:1:54:00:20>
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'IW1\r54\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'IR1\r54\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	SYSC command returned: INTERP[881415021737-71775☐☐☐☐☐☐☐☐☐☐☐☐☐☐]LITERAL[3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 13:03:56]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r00\r\tIR1\r54\r20\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r00\r:P\rIR1\r54\r20\r:P\r3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\rINTERP[881415021737-71775\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610]LITERAL[3838313431353032313733372D3731373735FFFFFFFFFFFFFFFFFFFFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 13:03:56]	Finished Get Serial Number
+[TITLE		:	Mon, 26, Mar 2018 13:03:56]	Finished

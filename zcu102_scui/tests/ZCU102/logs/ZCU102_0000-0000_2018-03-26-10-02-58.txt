@@ -1,0 +1,42 @@
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 10:03:04]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:03:10]	PRESSED: Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:03:10]	Starting Restore Firmware
+[INFO		:	Mon, 26, Mar 2018 10:03:10]	Starting step tcl
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:03:10]	To run this command manually open a shell in "C:\zcu102_scui\tests\ZCU102"
+[INFO		:	Mon, 26, Mar 2018 10:03:10]	then run "C:\Xilinx\Vivado\2017.4\bin\vivado.bat" -mode batch -source "firmware\\msp_flash0.tcl" -nojournal -nolog -tclargs
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source {firmware\\msp_flash0.tcl}
+# pwd
+# exec xsdb msp_flash1.tcl
+couldn't read file "msp_flash1.tcl": no such file or directory
+    while executing
+"exec xsdb msp_flash1.tcl"
+    (file "firmware\\msp_flash0.tcl" line 2)
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 10:03:21 2018...
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	Starting step cmd
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	u'VRN\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	u'MSP v1.50 I2C Bridge v1.50\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:03:21]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.50 I2C Bridge v1.50\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 10:03:21]	Finished Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:03:21]	Finished

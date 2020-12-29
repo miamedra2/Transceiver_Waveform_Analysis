@@ -1,0 +1,1480 @@
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	Board: ZCU102
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	Revision: Rev. 1.0
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	Silicon: ES2
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	Serial Number: 0000-0000
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Sat, 04, Aug 2018 15:02:28]	Working in directory: ZCU102
+[TITLE		:	Sat, 04, Aug 2018 15:02:33]	PRESSED: Read Si570 User Frequency
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'\x08\r\t\r\n:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	SYSC Full Command: [('<setmux:1:74:04>', '', '', ''), ('<recallsi570:1:5d:10>', '', '', ''), ('<interpsi570:300>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	
+											Running sysc func: <setmux:1:74:04>
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'IW1\r74\r04\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	
+											Running sysc func: <recallsi570:1:5d:10>
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'A0\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:33]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'42\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'F4\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'00\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'4E\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'DA\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'MRS\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'405C924629AF6D90\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <interpsi570:300>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	SYSC command returned: FREQUENCY[300.000 MHz]
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											SYSC Interpreted Command: [('<setmux:1:74:04>', '', '', ''), ('<recallsi570:1:5d:10>', '', '', ''), ('<interpsi570:300>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r04\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r10\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r\t\r\n:R\r\r:R\r~~~\r:P\rIW1\r74\r04\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\rA0\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\r42\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rF4\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r00\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r4E\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rDA\rIW1\r5d\r8700\r:P\rMRS\r10\r:P\r405C924629AF6D90\r~~~\r:P\rFREQUENCY[300.000 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:02:34]	Finished Read Si570 User Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:02:34]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:02:34]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'MRS\r11\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'405C923FB764D3CF\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	SYSC command returned: FREQUENCY[156.250 MHz]
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:34]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C923FB764D3CF\r~~~\r:P\rFREQUENCY[156.250 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:02:34]	Finished Read Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:02:34]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:02:35]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'405C909364A75FDA\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	SYSC command returned: VALUE[114.26]
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:35]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r405C909364A75FDA\r~~~\r:P\rVALUE[114.26]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:02:35]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:02:35]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:02:45]	PRESSED: Set Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	SYSC Full Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	
+											Running sysc func: <setmux:1:74:10>
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	u'IW1\r74\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:02:45]	
+											Running sysc func: <calcsi5328:1:69:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0054\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r01e1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0212\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0355\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0412\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0a00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r0b40\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r132c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r143e\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r15fc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r16df\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r171f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r183f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r19e0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r1f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2102\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2200\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2300\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2402\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2800\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2b07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2cff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2dff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2e07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r2fff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r30ff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r371b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8318\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8400\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8a0F\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8bFF\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8e00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r69\r8840\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	
+											Running sysc func: <saveval:12:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'MWS\r12\r4063880000000000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:18]	
+											SYSC Interpreted Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r10\r\tIW1\r69\r0054\r\tIW1\r69\r01e1\r\tIW1\r69\r0212\r\tIW1\r69\r0355\r\tIW1\r69\r0412\r\tIW1\r69\r0a00\r\tIW1\r69\r0b40\r\tIW1\r69\r132c\r\tIW1\r69\r143e\r\tIW1\r69\r15fc\r\tIW1\r69\r16df\r\tIW1\r69\r171f\r\tIW1\r69\r183f\r\tIW1\r69\r19e0\r\tIW1\r69\r1f00\r\tIW1\r69\r2000\r\tIW1\r69\r2102\r\tIW1\r69\r2200\r\tIW1\r69\r2300\r\tIW1\r69\r2402\r\tIW1\r69\r2800\r\tIW1\r69\r2900\r\tIW1\r69\r2a01\r\tIW1\r69\r2b07\r\tIW1\r69\r2cff\r\tIW1\r69\r2dff\r\tIW1\r69\r2e07\r\tIW1\r69\r2fff\r\tIW1\r69\r30ff\r\tIW1\r69\r371b\r\tIW1\r69\r8318\r\tIW1\r69\r8400\r\tIW1\r69\r8900\r\tIW1\r69\r8a0F\r\tIW1\r69\r8bFF\r\tIW1\r69\r8e00\r\tIW1\r69\r8f00\r\tIW1\r69\r8840\r\tMWS\r12\r4063880000000000\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r10\r:P\r~~~\r:P\rIW1\r69\r0054\r:P\rIW1\r69\r01e1\r:P\rIW1\r69\r0212\r:P\rIW1\r69\r0355\r:P\rIW1\r69\r0412\r:P\rIW1\r69\r0a00\r:P\rIW1\r69\r0b40\r:P\rIW1\r69\r132c\r:P\rIW1\r69\r143e\r:P\rIW1\r69\r15fc\r:P\rIW1\r69\r16df\r:P\rIW1\r69\r171f\r:P\rIW1\r69\r183f\r:P\rIW1\r69\r19e0\r:P\rIW1\r69\r1f00\r:P\rIW1\r69\r2000\r:P\rIW1\r69\r2102\r:P\rIW1\r69\r2200\r:P\rIW1\r69\r2300\r:P\rIW1\r69\r2402\r:P\rIW1\r69\r2800\r:P\rIW1\r69\r2900\r:P\rIW1\r69\r2a01\r:P\rIW1\r69\r2b07\r:P\rIW1\r69\r2cff\r:P\rIW1\r69\r2dff\r:P\rIW1\r69\r2e07\r:P\rIW1\r69\r2fff\r:P\rIW1\r69\r30ff\r:P\rIW1\r69\r371b\r:P\rIW1\r69\r8318\r:P\rIW1\r69\r8400\r:P\rIW1\r69\r8900\r:P\rIW1\r69\r8a0F\r:P\rIW1\r69\r8bFF\r:P\rIW1\r69\r8e00\r:P\rIW1\r69\r8f00\r:P\rIW1\r69\r8840\r:P\r~~~\r:P\rMWS\r12\r4063880000000000\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:03:18]	Finished Set Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:03:18]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:03:27]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	SYSC Full Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <setmux:1:75:02>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r75\r02\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'2C\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'55\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'0B\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <calcsi570:1:5d:156.25:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r09bc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r0a2c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r0b55\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r5d\r0c0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:27]	
+											SYSC Interpreted Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r02\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09bc\r\tIW1\r5d\r0a2c\r\tIW1\r5d\r0b55\r\tIW1\r5d\r0c0b\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r02\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r2C\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r55\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r0B\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09bc\r:P\rIW1\r5d\r0a2c\r:P\rIW1\r5d\r0b55\r:P\rIW1\r5d\r0c0b\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:03:27]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:03:27]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:03:30]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	SYSC Full Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	
+											Running sysc func: <setmux:1:75:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r75\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'D9\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'E4\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'80\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	
+											Running sysc func: <calcsi570:1:5d:156.25:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:30]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r5d\r09bb\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r5d\r0ad9\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r5d\r0be4\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r5d\r0c80\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:31]	
+											SYSC Interpreted Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r01\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09bb\r\tIW1\r5d\r0ad9\r\tIW1\r5d\r0be4\r\tIW1\r5d\r0c80\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r01\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rD9\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\rE4\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r80\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09bb\r:P\rIW1\r5d\r0ad9\r:P\rIW1\r5d\r0be4\r:P\rIW1\r5d\r0c80\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:03:31]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:03:31]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:03:50]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	SYSC Full Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <setmux:1:75:02>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r75\r02\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'2C\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'55\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'0B\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <calcsi570:1:5d:156.25:163>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r0721\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r09ac\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r0ac4\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r0bf4\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r5d\r0cf6\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:50]	
+											SYSC Interpreted Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r02\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0721\r\tIW1\r5d\r0842\r\tIW1\r5d\r09ac\r\tIW1\r5d\r0ac4\r\tIW1\r5d\r0bf4\r\tIW1\r5d\r0cf6\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r02\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r2C\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r55\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r0B\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0721\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09ac\r:P\rIW1\r5d\r0ac4\r:P\rIW1\r5d\r0bf4\r:P\rIW1\r5d\r0cf6\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:03:50]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:03:50]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:03:55]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	SYSC Full Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	
+											Running sysc func: <setmux:1:75:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IW1\r75\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'D9\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'E4\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'80\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	
+											Running sysc func: <calcsi570:1:5d:156.25:163>
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r0721\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r09ac\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r0a74\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r0b54\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r5d\r0cb8\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:03:56]	
+											SYSC Interpreted Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r01\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0721\r\tIW1\r5d\r0842\r\tIW1\r5d\r09ac\r\tIW1\r5d\r0a74\r\tIW1\r5d\r0b54\r\tIW1\r5d\r0cb8\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r01\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rD9\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\rE4\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r80\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0721\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09ac\r:P\rIW1\r5d\r0a74\r:P\rIW1\r5d\r0b54\r:P\rIW1\r5d\r0cb8\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:03:56]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:03:56]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:04:11]	PRESSED: Set Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	SYSC Full Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	
+											Running sysc func: <setmux:1:74:10>
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	u'IW1\r74\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:11]	
+											Running sysc func: <calcsi5328:1:69:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0054\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r01e1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0212\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0355\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0412\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0a00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r0b40\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r132c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r143e\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r15fc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r16df\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r171f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r183f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r19e0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r1f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2102\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2200\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2300\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2402\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2800\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2b07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2cff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2dff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2e07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r2fff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r30ff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r371b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8318\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8400\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8a0F\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8bFF\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8e00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r69\r8840\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	
+											Running sysc func: <saveval:12:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'MWS\r12\r4063880000000000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:42]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:42]	
+											SYSC Interpreted Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r10\r\tIW1\r69\r0054\r\tIW1\r69\r01e1\r\tIW1\r69\r0212\r\tIW1\r69\r0355\r\tIW1\r69\r0412\r\tIW1\r69\r0a00\r\tIW1\r69\r0b40\r\tIW1\r69\r132c\r\tIW1\r69\r143e\r\tIW1\r69\r15fc\r\tIW1\r69\r16df\r\tIW1\r69\r171f\r\tIW1\r69\r183f\r\tIW1\r69\r19e0\r\tIW1\r69\r1f00\r\tIW1\r69\r2000\r\tIW1\r69\r2102\r\tIW1\r69\r2200\r\tIW1\r69\r2300\r\tIW1\r69\r2402\r\tIW1\r69\r2800\r\tIW1\r69\r2900\r\tIW1\r69\r2a01\r\tIW1\r69\r2b07\r\tIW1\r69\r2cff\r\tIW1\r69\r2dff\r\tIW1\r69\r2e07\r\tIW1\r69\r2fff\r\tIW1\r69\r30ff\r\tIW1\r69\r371b\r\tIW1\r69\r8318\r\tIW1\r69\r8400\r\tIW1\r69\r8900\r\tIW1\r69\r8a0F\r\tIW1\r69\r8bFF\r\tIW1\r69\r8e00\r\tIW1\r69\r8f00\r\tIW1\r69\r8840\r\tMWS\r12\r4063880000000000\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r10\r:P\r~~~\r:P\rIW1\r69\r0054\r:P\rIW1\r69\r01e1\r:P\rIW1\r69\r0212\r:P\rIW1\r69\r0355\r:P\rIW1\r69\r0412\r:P\rIW1\r69\r0a00\r:P\rIW1\r69\r0b40\r:P\rIW1\r69\r132c\r:P\rIW1\r69\r143e\r:P\rIW1\r69\r15fc\r:P\rIW1\r69\r16df\r:P\rIW1\r69\r171f\r:P\rIW1\r69\r183f\r:P\rIW1\r69\r19e0\r:P\rIW1\r69\r1f00\r:P\rIW1\r69\r2000\r:P\rIW1\r69\r2102\r:P\rIW1\r69\r2200\r:P\rIW1\r69\r2300\r:P\rIW1\r69\r2402\r:P\rIW1\r69\r2800\r:P\rIW1\r69\r2900\r:P\rIW1\r69\r2a01\r:P\rIW1\r69\r2b07\r:P\rIW1\r69\r2cff\r:P\rIW1\r69\r2dff\r:P\rIW1\r69\r2e07\r:P\rIW1\r69\r2fff\r:P\rIW1\r69\r30ff\r:P\rIW1\r69\r371b\r:P\rIW1\r69\r8318\r:P\rIW1\r69\r8400\r:P\rIW1\r69\r8900\r:P\rIW1\r69\r8a0F\r:P\rIW1\r69\r8bFF\r:P\rIW1\r69\r8e00\r:P\rIW1\r69\r8f00\r:P\rIW1\r69\r8840\r:P\r~~~\r:P\rMWS\r12\r4063880000000000\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:04:42]	Finished Set Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:04:42]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:04:50]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'4063880000000000\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	SYSC command returned: VALUE[156.25]
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:04:50]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r4063880000000000\r~~~\r:P\rVALUE[156.25]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:04:50]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:04:50]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:05:10]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'MRS\r11\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'405C923FB764D3CF\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	SYSC command returned: FREQUENCY[156.250 MHz]
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:10]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C923FB764D3CF\r~~~\r:P\rFREQUENCY[156.250 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:05:10]	Finished Read Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:05:10]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:05:57]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	
+											Running sysc func: <calcsi570:1:5d:156.25:163:01>
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r0721\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r09ac\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r0a9a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r0bfa\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r5d\r0ccc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'MWS\r01\r405c923a67026164\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:05:57]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0721\r\tIW1\r5d\r0842\r\tIW1\r5d\r09ac\r\tIW1\r5d\r0a9a\r\tIW1\r5d\r0bfa\r\tIW1\r5d\r0ccc\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c923a67026164\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0721\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09ac\r:P\rIW1\r5d\r0a9a\r:P\rIW1\r5d\r0bfa\r:P\rIW1\r5d\r0ccc\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c923a67026164\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:05:57]	Finished Set Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:05:57]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:10:12]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:12]	
+											Running sysc func: <calcsi570:1:5d:156.25:148.25:01>
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r0741\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r09eb\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r0a2f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r0b95\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r5d\r0cf7\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'MWS\r01\r405c923a67026164\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:10:13]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0741\r\tIW1\r5d\r0842\r\tIW1\r5d\r09eb\r\tIW1\r5d\r0a2f\r\tIW1\r5d\r0b95\r\tIW1\r5d\r0cf7\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c923a67026164\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0741\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09eb\r:P\rIW1\r5d\r0a2f\r:P\rIW1\r5d\r0b95\r:P\rIW1\r5d\r0cf7\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c923a67026164\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:10:13]	Finished Set Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:10:13]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:11:14]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:14]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	
+											Running sysc func: <calcsi570:1:5d:156.25:156.25:01>
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r09bc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r0a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r0b69\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r5d\r0c25\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'MWS\r01\r405c923a67026164\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:11:15]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09bc\r\tIW1\r5d\r0a01\r\tIW1\r5d\r0b69\r\tIW1\r5d\r0c25\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c923a67026164\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09bc\r:P\rIW1\r5d\r0a01\r:P\rIW1\r5d\r0b69\r:P\rIW1\r5d\r0c25\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c923a67026164\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:11:15]	Finished Set Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:11:15]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:12:16]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	
+											Running sysc func: <calcsi570:1:5d:156.25:100:01>
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r0722\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r09bc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r0a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r0b69\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r5d\r0c25\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'MWS\r01\r405c923a67026164\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:16]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0722\r\tIW1\r5d\r0842\r\tIW1\r5d\r09bc\r\tIW1\r5d\r0a01\r\tIW1\r5d\r0b69\r\tIW1\r5d\r0c25\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c923a67026164\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0722\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09bc\r:P\rIW1\r5d\r0a01\r:P\rIW1\r5d\r0b69\r:P\rIW1\r5d\r0c25\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c923a67026164\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:12:16]	Finished Set Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:12:16]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:12:18]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'22\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'42\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'MRS\r11\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'405C923A67026164\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	SYSC command returned: FREQUENCY[100.000 MHz]
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:12:18]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r22\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\r42\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C923A67026164\r~~~\r:P\rFREQUENCY[100.000 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:12:18]	Finished Read Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:12:18]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:18:42]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:18:42]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'\x08\r\t\r\n:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'405C909364A75FDA\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	SYSC command returned: VALUE[114.26]
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:43]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r\t\r\n:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r405C909364A75FDA\r~~~\r:P\rVALUE[114.26]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:18:43]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:18:43]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:18:47]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'01\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'69\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'25\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:47]	u'MRS\r11\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	u'405C923A67026164\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	SYSC command returned: FREQUENCY[156.250 MHz]
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:48]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r69\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r25\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C923A67026164\r~~~\r:P\rFREQUENCY[156.250 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:18:48]	Finished Read Si570 MGT Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:18:48]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:18:53]	PRESSED: Set Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	SYSC Full Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	
+											Running sysc func: <setmux:1:74:10>
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	u'IW1\r74\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:18:53]	
+											Running sysc func: <calcsi5328:1:69:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0054\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r01e1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0212\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0355\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0412\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0a00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r0b40\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r132c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r143e\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r15fc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r16df\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r171f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r183f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r19e0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r1f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2102\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2200\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2300\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2402\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2800\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2b07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2cff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2dff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2e07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r2fff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r30ff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r371b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8318\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8400\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8a0F\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8bFF\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8e00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r69\r8840\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	
+											Running sysc func: <saveval:12:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'MWS\r12\r4063880000000000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:19:20]	
+											SYSC Interpreted Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r10\r\tIW1\r69\r0054\r\tIW1\r69\r01e1\r\tIW1\r69\r0212\r\tIW1\r69\r0355\r\tIW1\r69\r0412\r\tIW1\r69\r0a00\r\tIW1\r69\r0b40\r\tIW1\r69\r132c\r\tIW1\r69\r143e\r\tIW1\r69\r15fc\r\tIW1\r69\r16df\r\tIW1\r69\r171f\r\tIW1\r69\r183f\r\tIW1\r69\r19e0\r\tIW1\r69\r1f00\r\tIW1\r69\r2000\r\tIW1\r69\r2102\r\tIW1\r69\r2200\r\tIW1\r69\r2300\r\tIW1\r69\r2402\r\tIW1\r69\r2800\r\tIW1\r69\r2900\r\tIW1\r69\r2a01\r\tIW1\r69\r2b07\r\tIW1\r69\r2cff\r\tIW1\r69\r2dff\r\tIW1\r69\r2e07\r\tIW1\r69\r2fff\r\tIW1\r69\r30ff\r\tIW1\r69\r371b\r\tIW1\r69\r8318\r\tIW1\r69\r8400\r\tIW1\r69\r8900\r\tIW1\r69\r8a0F\r\tIW1\r69\r8bFF\r\tIW1\r69\r8e00\r\tIW1\r69\r8f00\r\tIW1\r69\r8840\r\tMWS\r12\r4063880000000000\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r10\r:P\r~~~\r:P\rIW1\r69\r0054\r:P\rIW1\r69\r01e1\r:P\rIW1\r69\r0212\r:P\rIW1\r69\r0355\r:P\rIW1\r69\r0412\r:P\rIW1\r69\r0a00\r:P\rIW1\r69\r0b40\r:P\rIW1\r69\r132c\r:P\rIW1\r69\r143e\r:P\rIW1\r69\r15fc\r:P\rIW1\r69\r16df\r:P\rIW1\r69\r171f\r:P\rIW1\r69\r183f\r:P\rIW1\r69\r19e0\r:P\rIW1\r69\r1f00\r:P\rIW1\r69\r2000\r:P\rIW1\r69\r2102\r:P\rIW1\r69\r2200\r:P\rIW1\r69\r2300\r:P\rIW1\r69\r2402\r:P\rIW1\r69\r2800\r:P\rIW1\r69\r2900\r:P\rIW1\r69\r2a01\r:P\rIW1\r69\r2b07\r:P\rIW1\r69\r2cff\r:P\rIW1\r69\r2dff\r:P\rIW1\r69\r2e07\r:P\rIW1\r69\r2fff\r:P\rIW1\r69\r30ff\r:P\rIW1\r69\r371b\r:P\rIW1\r69\r8318\r:P\rIW1\r69\r8400\r:P\rIW1\r69\r8900\r:P\rIW1\r69\r8a0F\r:P\rIW1\r69\r8bFF\r:P\rIW1\r69\r8e00\r:P\rIW1\r69\r8f00\r:P\rIW1\r69\r8840\r:P\r~~~\r:P\rMWS\r12\r4063880000000000\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:19:20]	Finished Set Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:19:20]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:20:36]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'4063880000000000\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	SYSC command returned: VALUE[156.25]
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:36]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r4063880000000000\r~~~\r:P\rVALUE[156.25]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:20:36]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:20:36]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:20:41]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	SYSC Full Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <setmux:1:75:01>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r75\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'D9\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'E4\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'80\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <calcsi570:1:5d:156.25:163>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r0721\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r09ac\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r0a74\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r0b54\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r5d\r0cb8\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:41]	
+											SYSC Interpreted Command: [('<setmux:1:75:01>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r01\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0721\r\tIW1\r5d\r0842\r\tIW1\r5d\r09ac\r\tIW1\r5d\r0a74\r\tIW1\r5d\r0b54\r\tIW1\r5d\r0cb8\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r01\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rD9\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\rE4\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r80\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0721\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09ac\r:P\rIW1\r5d\r0a74\r:P\rIW1\r5d\r0b54\r:P\rIW1\r5d\r0cb8\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:20:41]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:20:41]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:20:43]	PRESSED: Set SI570
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	SYSC Full Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <setmux:1:75:02>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r75\r02\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <setmux:1:70:01>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r70\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'2C\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'55\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'0B\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <calcsi570:1:5d:156.25:163>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r0721\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r0842\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r09ac\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r0ac4\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r0bf4\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r5d\r0cf6\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'DLY\r3A98\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <setmux:1:70:00>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r70\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											Running sysc func: <setmux:1:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'IW1\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:20:43]	
+											SYSC Interpreted Command: [('<setmux:1:75:02>', '', '', ''), ('<setmux:1:70:01>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>>', '', '', ''), ('<setmux:1:70:00>', '', '', ''), ('<setmux:1:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r75\r02\r\tIW1\r70\r01\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0721\r\tIW1\r5d\r0842\r\tIW1\r5d\r09ac\r\tIW1\r5d\r0ac4\r\tIW1\r5d\r0bf4\r\tIW1\r5d\r0cf6\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tIW1\r70\r00\r\tIW1\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r75\r02\r:P\r~~~\r:P\rIW1\r70\r01\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r2C\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r55\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\r0B\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0721\r:P\rIW1\r5d\r0842\r:P\rIW1\r5d\r09ac\r:P\rIW1\r5d\r0ac4\r:P\rIW1\r5d\r0bf4\r:P\rIW1\r5d\r0cf6\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\r~~~\r:P\rIW1\r70\r00\r:P\r~~~\r:P\rIW1\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:20:43]	Finished Set SI570
+[TITLE		:	Sat, 04, Aug 2018 15:20:43]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:16]	PRESSED: Get Version
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	u'VRN\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	u'MSP v1.50 I2C Bridge v1.50\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:16]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.50 I2C Bridge v1.50\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:24:16]	Finished Get Version
+[TITLE		:	Sat, 04, Aug 2018 15:24:16]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:20]	PRESSED: Get Current Temp
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'IW0\r32\r00004108\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'IW0\r32\r00304008\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:20]	u'IW0\r32\rE17F4808\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IW0\r32\r00004908\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IW0\r32\rE1454A08\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IW0\r32\r00004B08\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IW0\r32\rD0204108\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	
+											Running sysc func: <sysmonget:0:32:00>
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IS0\r32\r00000004\r2\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	
+											Running sysc func: <sysmoninterptemp>
+[ERROR		:	Sat, 04, Aug 2018 15:24:21]	Error while running sysc function
+											Traceback (most recent call last):
+											  File "testthread.py", line 497, in sysc
+											  File "config.py", line 34, in sysmoninterptemp
+											IndexError: list index out of range
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:21]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000004\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:N\rIW0\r32\r00304008\r:N\rIW0\r32\rE17F4808\r:N\rIW0\r32\r00004908\r:N\rIW0\r32\rE1454A08\r:N\rIW0\r32\r00004B08\r:N\rIW0\r32\rD0204108\r:N\r~~~\r:P\rIS0\r32\r00000004\r2\r:N\r~~~\r:P\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:24:21]	Finished Get Current Temp
+[TITLE		:	Sat, 04, Aug 2018 15:24:21]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:22]	PRESSED: Get Current Temp
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\r00004108\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\r00304008\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\rE17F4808\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\r00004908\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\rE1454A08\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\r00004B08\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r32\rD0204108\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											Running sysc func: <sysmonget:0:32:00>
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IS0\r32\r00000004\r2\r:N\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											Running sysc func: <sysmoninterptemp>
+[ERROR		:	Sat, 04, Aug 2018 15:24:22]	Error while running sysc function
+											Traceback (most recent call last):
+											  File "testthread.py", line 497, in sysc
+											  File "config.py", line 34, in sysmoninterptemp
+											IndexError: list index out of range
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:22]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000004\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:N\rIW0\r32\r00304008\r:N\rIW0\r32\rE17F4808\r:N\rIW0\r32\r00004908\r:N\rIW0\r32\rE1454A08\r:N\rIW0\r32\r00004B08\r:N\rIW0\r32\rD0204108\r:N\r~~~\r:P\rIS0\r32\r00000004\r2\r:N\r~~~\r:P\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:24:22]	Finished Get Current Temp
+[TITLE		:	Sat, 04, Aug 2018 15:24:22]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:27]	PRESSED: Get PSINTFP Voltage
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	
+											Running sysc func: <getvoltage:0:0A>
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'IS0\r0A\r20\r1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'14\rIS0\r0A\r8B\r2\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'9B0D\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	SYSC command returned: VOLTAGE[0.85 Volts]
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:27]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r0A\r20\r1\r\tIS0\r0A\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r0A\r20\r1\r:P\r14\rIS0\r0A\r8B\r2\r:P\r9B0D\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:24:27]	Finished Get PSINTFP Voltage
+[TITLE		:	Sat, 04, Aug 2018 15:24:27]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:34]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'405C909364A75FDA\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	SYSC command returned: VALUE[114.26]
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:34]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r405C909364A75FDA\r~~~\r:P\rVALUE[114.26]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:24:34]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:24:34]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:24:38]	PRESSED: Set Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	SYSC Full Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	
+											Running sysc func: <setmux:1:74:10>
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	u'IW1\r74\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:24:38]	
+											Running sysc func: <calcsi5328:1:69:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0054\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r01e1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0212\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0355\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0412\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0a00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r0b40\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r132c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r143e\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r15fc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r16df\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r171f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r183f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r19e0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r1f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2102\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2200\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2300\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2402\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2800\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2b07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2cff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2dff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2e07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r2fff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r30ff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r371b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8318\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8400\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8a0F\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8bFF\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8e00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r69\r8840\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	
+											Running sysc func: <saveval:12:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'MWS\r12\r4063880000000000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:25:05]	
+											SYSC Interpreted Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r10\r\tIW1\r69\r0054\r\tIW1\r69\r01e1\r\tIW1\r69\r0212\r\tIW1\r69\r0355\r\tIW1\r69\r0412\r\tIW1\r69\r0a00\r\tIW1\r69\r0b40\r\tIW1\r69\r132c\r\tIW1\r69\r143e\r\tIW1\r69\r15fc\r\tIW1\r69\r16df\r\tIW1\r69\r171f\r\tIW1\r69\r183f\r\tIW1\r69\r19e0\r\tIW1\r69\r1f00\r\tIW1\r69\r2000\r\tIW1\r69\r2102\r\tIW1\r69\r2200\r\tIW1\r69\r2300\r\tIW1\r69\r2402\r\tIW1\r69\r2800\r\tIW1\r69\r2900\r\tIW1\r69\r2a01\r\tIW1\r69\r2b07\r\tIW1\r69\r2cff\r\tIW1\r69\r2dff\r\tIW1\r69\r2e07\r\tIW1\r69\r2fff\r\tIW1\r69\r30ff\r\tIW1\r69\r371b\r\tIW1\r69\r8318\r\tIW1\r69\r8400\r\tIW1\r69\r8900\r\tIW1\r69\r8a0F\r\tIW1\r69\r8bFF\r\tIW1\r69\r8e00\r\tIW1\r69\r8f00\r\tIW1\r69\r8840\r\tMWS\r12\r4063880000000000\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r10\r:P\r~~~\r:P\rIW1\r69\r0054\r:P\rIW1\r69\r01e1\r:P\rIW1\r69\r0212\r:P\rIW1\r69\r0355\r:P\rIW1\r69\r0412\r:P\rIW1\r69\r0a00\r:P\rIW1\r69\r0b40\r:P\rIW1\r69\r132c\r:P\rIW1\r69\r143e\r:P\rIW1\r69\r15fc\r:P\rIW1\r69\r16df\r:P\rIW1\r69\r171f\r:P\rIW1\r69\r183f\r:P\rIW1\r69\r19e0\r:P\rIW1\r69\r1f00\r:P\rIW1\r69\r2000\r:P\rIW1\r69\r2102\r:P\rIW1\r69\r2200\r:P\rIW1\r69\r2300\r:P\rIW1\r69\r2402\r:P\rIW1\r69\r2800\r:P\rIW1\r69\r2900\r:P\rIW1\r69\r2a01\r:P\rIW1\r69\r2b07\r:P\rIW1\r69\r2cff\r:P\rIW1\r69\r2dff\r:P\rIW1\r69\r2e07\r:P\rIW1\r69\r2fff\r:P\rIW1\r69\r30ff\r:P\rIW1\r69\r371b\r:P\rIW1\r69\r8318\r:P\rIW1\r69\r8400\r:P\rIW1\r69\r8900\r:P\rIW1\r69\r8a0F\r:P\rIW1\r69\r8bFF\r:P\rIW1\r69\r8e00\r:P\rIW1\r69\r8f00\r:P\rIW1\r69\r8840\r:P\r~~~\r:P\rMWS\r12\r4063880000000000\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:25:05]	Finished Set Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:25:05]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:33:44]	PRESSED: Read Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	
+											Running sysc func: <getval:12>
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'MRS\r12\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'4063880000000000\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	
+											Running sysc func: <interpval>
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	SYSC command returned: VALUE[156.25]
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:44]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r4063880000000000\r~~~\r:P\rVALUE[156.25]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:33:44]	Finished Read Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:33:44]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:33:47]	PRESSED: Set Si5328 Frequency
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	SYSC Full Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	
+											Running sysc func: <setmux:1:74:10>
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	u'IW1\r74\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:33:47]	
+											Running sysc func: <calcsi5328:1:69:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0054\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r01e1\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0212\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0355\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0412\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0a00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r0b40\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r132c\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r143e\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r15fc\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r16df\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r171f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r183f\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r19e0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r1f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2102\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2200\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2300\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2402\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2800\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2a01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2b07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2cff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2dff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2e07\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r2fff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r30ff\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:12]	u'IW1\r69\r371b\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8318\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8400\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8900\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8a0F\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8bFF\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8e00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8f00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r69\r8840\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	
+											Running sysc func: <saveval:12:156.25>
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'MWS\r12\r4063880000000000\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:34:13]	
+											SYSC Interpreted Command: [('<setmux:1:74:10>', '', '', ''), ('<calcsi5328:1:69:<1>>', '', '', ''), ('<saveval:12:<1>>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r10\r\tIW1\r69\r0054\r\tIW1\r69\r01e1\r\tIW1\r69\r0212\r\tIW1\r69\r0355\r\tIW1\r69\r0412\r\tIW1\r69\r0a00\r\tIW1\r69\r0b40\r\tIW1\r69\r132c\r\tIW1\r69\r143e\r\tIW1\r69\r15fc\r\tIW1\r69\r16df\r\tIW1\r69\r171f\r\tIW1\r69\r183f\r\tIW1\r69\r19e0\r\tIW1\r69\r1f00\r\tIW1\r69\r2000\r\tIW1\r69\r2102\r\tIW1\r69\r2200\r\tIW1\r69\r2300\r\tIW1\r69\r2402\r\tIW1\r69\r2800\r\tIW1\r69\r2900\r\tIW1\r69\r2a01\r\tIW1\r69\r2b07\r\tIW1\r69\r2cff\r\tIW1\r69\r2dff\r\tIW1\r69\r2e07\r\tIW1\r69\r2fff\r\tIW1\r69\r30ff\r\tIW1\r69\r371b\r\tIW1\r69\r8318\r\tIW1\r69\r8400\r\tIW1\r69\r8900\r\tIW1\r69\r8a0F\r\tIW1\r69\r8bFF\r\tIW1\r69\r8e00\r\tIW1\r69\r8f00\r\tIW1\r69\r8840\r\tMWS\r12\r4063880000000000\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r10\r:P\r~~~\r:P\rIW1\r69\r0054\r:P\rIW1\r69\r01e1\r:P\rIW1\r69\r0212\r:P\rIW1\r69\r0355\r:P\rIW1\r69\r0412\r:P\rIW1\r69\r0a00\r:P\rIW1\r69\r0b40\r:P\rIW1\r69\r132c\r:P\rIW1\r69\r143e\r:P\rIW1\r69\r15fc\r:P\rIW1\r69\r16df\r:P\rIW1\r69\r171f\r:P\rIW1\r69\r183f\r:P\rIW1\r69\r19e0\r:P\rIW1\r69\r1f00\r:P\rIW1\r69\r2000\r:P\rIW1\r69\r2102\r:P\rIW1\r69\r2200\r:P\rIW1\r69\r2300\r:P\rIW1\r69\r2402\r:P\rIW1\r69\r2800\r:P\rIW1\r69\r2900\r:P\rIW1\r69\r2a01\r:P\rIW1\r69\r2b07\r:P\rIW1\r69\r2cff\r:P\rIW1\r69\r2dff\r:P\rIW1\r69\r2e07\r:P\rIW1\r69\r2fff\r:P\rIW1\r69\r30ff\r:P\rIW1\r69\r371b\r:P\rIW1\r69\r8318\r:P\rIW1\r69\r8400\r:P\rIW1\r69\r8900\r:P\rIW1\r69\r8a0F\r:P\rIW1\r69\r8bFF\r:P\rIW1\r69\r8e00\r:P\rIW1\r69\r8f00\r:P\rIW1\r69\r8840\r:P\r~~~\r:P\rMWS\r12\r4063880000000000\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:34:13]	Finished Set Si5328 Frequency
+[TITLE		:	Sat, 04, Aug 2018 15:34:13]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:37:13]	PRESSED: Get Board Name
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	
+											Running sysc func: <readeeprom:1:54:D0:10>
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'IW1\r54\rd0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'IR1\r54\r10\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'5A43553130322020202020FFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	SYSC command returned: INTERP[ZCU102     ☐☐☐☐☐]LITERAL[5A43553130322020202020FFFFFFFFFF]
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:13]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:D0:10>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\rd0\r\tIR1\r54\r10\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\rd0\r:P\rIR1\r54\r10\r:P\r5A43553130322020202020FFFFFFFFFF\r~~~\r:P\rINTERP[ZCU102     \u2610\u2610\u2610\u2610\u2610]LITERAL[5A43553130322020202020FFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:37:13]	Finished Get Board Name
+[TITLE		:	Sat, 04, Aug 2018 15:37:13]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:37:14]	PRESSED: Get Board Revision
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	
+											Running sysc func: <readeeprom:1:54:E0:03>
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'IW1\r54\re0\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'IR1\r54\r03\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'312E30\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	SYSC command returned: INTERP[1.0]LITERAL[312E30]
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:14]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:E0:03>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\re0\r\tIR1\r54\r03\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\re0\r:P\rIR1\r54\r03\r:P\r312E30\r~~~\r:P\rINTERP[1.0]LITERAL[312E30]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:37:14]	Finished Get Board Revision
+[TITLE		:	Sat, 04, Aug 2018 15:37:14]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:37:15]	PRESSED: Get Serial Number
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	
+											Running sysc func: <readeeprom:1:54:00:20>
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'IW1\r54\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'IR1\r54\r20\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	
+											Running sysc func: <interpeeprom>
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	SYSC command returned: INTERP[0000-0000☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐☐]LITERAL[303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:15]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:00:20>', '', '', ''), ('<interpeeprom>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r00\r\tIR1\r54\r20\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r00\r:P\rIR1\r54\r20\r:P\r303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\r~~~\r:P\rINTERP[0000-0000\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610\u2610]LITERAL[303030302D30303030FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:37:15]	Finished Get Serial Number
+[TITLE		:	Sat, 04, Aug 2018 15:37:15]	Finished
+[TITLE		:	Sat, 04, Aug 2018 15:37:16]	PRESSED: Get MAC Address
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	Starting step sysc
+											==========
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'\x08\r:R\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	SYSC Full Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	
+											Running sysc func: <setmux:1:74:01>
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'IW1\r74\r01\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	
+											Running sysc func: <readeeprom:1:54:20:06>
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'IW1\r54\r20\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'IR1\r54\r06\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'010203040506\r~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	
+											Running sysc func: <literaleeprom:F>
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	SYSC command returned: LITERAL[010203040506]INTERP[☐☐☐☐☐☐]
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	u'~~~\r:P\r'
+[INFO		:	Sat, 04, Aug 2018 15:37:16]	
+											SYSC Interpreted Command: [('<setmux:1:74:01>', '', '', ''), ('<readeeprom:1:54:20:06>', '', '', ''), ('<literaleeprom:F>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r01\r\tIW1\r54\r20\r\tIR1\r54\r06\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r01\r:P\r~~~\r:P\rIW1\r54\r20\r:P\rIR1\r54\r06\r:P\r010203040506\r~~~\r:P\rLITERAL[010203040506]INTERP[\u2610\u2610\u2610\u2610\u2610\u2610]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Sat, 04, Aug 2018 15:37:16]	Finished Get MAC Address
+[TITLE		:	Sat, 04, Aug 2018 15:37:16]	Finished

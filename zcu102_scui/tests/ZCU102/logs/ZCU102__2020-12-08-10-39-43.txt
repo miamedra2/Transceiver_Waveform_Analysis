@@ -1,0 +1,6 @@
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	Board: ZCU102
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	Revision: Rev. 1.0
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	Silicon: PROD
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	Serial Number: 
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Tue, 08, Dec 2020 10:39:47]	Working in directory: ZCU102

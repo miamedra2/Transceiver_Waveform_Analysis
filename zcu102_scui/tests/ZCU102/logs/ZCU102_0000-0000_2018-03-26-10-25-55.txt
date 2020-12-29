@@ -1,0 +1,132 @@
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 10:26:01]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:26:07]	PRESSED: Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:26:07]	Starting Restore Firmware
+[INFO		:	Mon, 26, Mar 2018 10:26:07]	Starting step manc
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:26:22]	Starting step tcl
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:26:22]	To run this command manually open a shell in "C:\zcu102_scui\tests\ZCU102"
+[INFO		:	Mon, 26, Mar 2018 10:26:22]	then run "C:\Xilinx\Vivado\2017.4\bin\vivado.bat" -mode batch -source "firmware\\msp_flash0.tcl" -nojournal -nolog -tclargs
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source {firmware\\msp_flash0.tcl}
+# exec xsdb firmware\\msp_flash1.tcl
+after 2000
+
+catch { disconnect }
+1
+after 2000
+
+connect -url tcp:127.0.0.1:3121
+attempting to launch hw_server
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+INFO: hw_server application started
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+****** Xilinx hw_server v2017.4
+
+  **** Build date : Dec 15 2017-21:08:27
+
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+
+INFO: hw_server application started
+
+INFO: Use Ctrl-C to exit hw_server application
+
+
+
+
+INFO: To connect to this hw_server instance use url: TCP:127.0.0.1:3121
+
+
+
+tcfchan#0
+targets -set -filter {name =~"*APU*"}
+no targets found with "name =~"*APU*"". available targets: none
+    while executing
+"error "no targets found with \"$params(filter)\". available targets:$target_list""
+    (procedure "targets" line 177)
+    invoked from within
+"targets -set -filter {name =~"*APU*"}"
+    invoked from within
+"puts [targets -set -filter {name =~"*APU*"}]"
+    (file "firmware\msp_flash1.tcl" line 10)
+    while executing
+"exec xsdb firmware\\msp_flash1.tcl"
+    (file "firmware\\msp_flash0.tcl" line 1)
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 10:26:41 2018...
+[INFO		:	Mon, 26, Mar 2018 10:26:41]	Starting step cmd
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:26:41]	Starting step sysc
+											==========
+[ERROR		:	Mon, 26, Mar 2018 10:26:52]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 10:27:02]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 10:27:02]	Timeout reached while waiting for occurance
+[ERROR		:	Mon, 26, Mar 2018 10:27:02]	The serial port does not seem to be responding...
+											Is the board on?
+[TITLE		:	Mon, 26, Mar 2018 10:27:02]	Finished Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:27:02]	Finished
+[TITLE		:	Mon, 26, Mar 2018 10:27:13]	PRESSED: Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:27:13]	Starting Restore Firmware
+[INFO		:	Mon, 26, Mar 2018 10:27:13]	Starting step manc
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:27:15]	Starting step tcl
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:27:15]	To run this command manually open a shell in "C:\zcu102_scui\tests\ZCU102"
+[INFO		:	Mon, 26, Mar 2018 10:27:15]	then run "C:\Xilinx\Vivado\2017.4\bin\vivado.bat" -mode batch -source "firmware\\msp_flash0.tcl" -nojournal -nolog -tclargs
+
+****** Vivado v2017.4 (64-bit)
+  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source {firmware\\msp_flash0.tcl}
+# exec xsdb firmware\\msp_flash1.tcl
+# exec firmware\\Firmware_flash_gui.bat
+Error: Invalid input for COM port
+Usage: MSP_BSL_Flasher.exe -c <COM port name> -f <File to be sent> -b <baud rate>-t <receiver timeout time> -r <maximum number of retries> -v <to enable verification> -p <to show progress bar>
+The system cannot find the path specified.
+    while executing
+"exec firmware\\Firmware_flash_gui.bat"
+    (file "firmware\\msp_flash0.tcl" line 2)
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 26 10:27:54 2018...
+[INFO		:	Mon, 26, Mar 2018 10:27:54]	Starting step cmd
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:27:54]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	u'R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	u'VRN\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	u'MSP v1.50 I2C Bridge v1.50\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:27:55]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.50 I2C Bridge v1.50\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 10:27:55]	Finished Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 10:27:55]	Finished

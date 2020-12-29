@@ -1,0 +1,7 @@
+buttons:
+  Main:
+    steps:
+    content:
+      rows: 1
+      columns: 1
+

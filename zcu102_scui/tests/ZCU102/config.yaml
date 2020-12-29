@@ -1,0 +1,12 @@
+system controller port: L:\[.*?\.3\].*?[PD]:\[.*?Quad.*?USB.*?to.*?UART.*?\]
+vivado path: C:\software\Xilinx\Vivado\2018.3
+EXE Checksum: 807014b8e7f19e1ab7877a02277d1ac0
+BIT Checksum: 8fef0555f5cebf5ce70bfd191e63aace
+SC Checksum: 9b97dd3b4727cff1ae61970f94bcb9fd
+Firmware Checksum: 9dbcf7bd4848e396201d28281239de4e
+Variables:
+  # Reserved Variable names: name, rev, ser, mac, sil, sysc
+  support_early_firmware_1v10: 'False'
+  path to pmbus: <setmux:{main iic port}:74:04>
+  reset mux: <setmux:{main iic port}:74:00>
+  main iic port: '0'

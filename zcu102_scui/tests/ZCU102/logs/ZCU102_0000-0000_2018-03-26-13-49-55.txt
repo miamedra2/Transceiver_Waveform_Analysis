@@ -1,0 +1,14 @@
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 13:50:03]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 13:50:13]	PRESSED: Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 13:50:13]	Starting Restore Firmware
+[INFO		:	Mon, 26, Mar 2018 13:50:13]	Starting step uart
+											==========
+[INFO		:	Mon, 26, Mar 2018 13:50:14]	
+											Returned from UART: ''
+[TITLE		:	Mon, 26, Mar 2018 13:50:14]	Finished Restore Firmware
+[TITLE		:	Mon, 26, Mar 2018 13:50:14]	Finished

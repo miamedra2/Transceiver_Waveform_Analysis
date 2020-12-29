@@ -1,0 +1,564 @@
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 09:30:31]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 09:30:38]	PRESSED: Run all
+[INFO		:	Mon, 26, Mar 2018 09:30:38]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											Running sysc func: <sysmonget:0:32:00>
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IS0\r32\r00000004\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'FA9E\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											Running sysc func: <sysmoninterptemp>
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	SYSC command returned: TEMP[39.82]
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:00>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000004\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000004\r2\r:P\rFA9E\r~~~\r:P\rTEMP[39.82]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:30:39]	Finished Get Current Temp
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:30:39]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:20>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmonget:0:32:20>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IS0\r32\r00002004\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'14A0\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmoninterptemp>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	SYSC command returned: TEMP[41.99]
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:20>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002004\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002004\r2\r:P\r14A0\r~~~\r:P\rTEMP[41.99]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:30:40]	Finished Get Max Temp
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:24>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmonget:0:32:24>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IS0\r32\r00002404\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'689D\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <sysmoninterptemp>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	SYSC command returned: TEMP[36.73]
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:30:40]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:24>', '', '', ''), ('<sysmoninterptemp>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002404\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002404\r2\r:P\r689D\r~~~\r:P\rTEMP[36.73]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:30:40]	Finished Get Min Temp
+[TITLE		:	Mon, 26, Mar 2018 09:30:40]	Finished
+[TITLE		:	Mon, 26, Mar 2018 09:31:16]	PRESSED: Run all
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:01>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <sysmonget:0:32:01>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IS0\r32\r00000104\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'7248\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	SYSC command returned: VOLTS[0.85]
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:01>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000104\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000104\r2\r:P\r7248\r~~~\r:P\rVOLTS[0.85]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:16]	Finished Get Current VCCINT
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:21>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:16]	
+											Running sysc func: <sysmonget:0:32:21>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IS0\r32\r00002104\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'E248\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC command returned: VOLTS[0.85]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:21>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002104\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002104\r2\r:P\rE248\r~~~\r:P\rVOLTS[0.85]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:17]	Finished Get Max VCCINT
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:25>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmonget:0:32:25>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IS0\r32\r00002504\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'CA47\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC command returned: VOLTS[0.84]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:25>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002504\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002504\r2\r:P\rCA47\r~~~\r:P\rVOLTS[0.84]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:17]	Finished Get Min VCCINT
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:06>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmonget:0:32:06>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IS0\r32\r00000604\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'7D48\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC command returned: VOLTS[0.85]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:06>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000604\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000604\r2\r:P\r7D48\r~~~\r:P\rVOLTS[0.85]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:17]	Finished Get Current VCCBRAM
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:23>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmonget:0:32:23>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IS0\r32\r00002304\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'3249\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	SYSC command returned: VOLTS[0.86]
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:17]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:23>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002304\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002304\r2\r:P\r3249\r~~~\r:P\rVOLTS[0.86]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:18]	Finished Get Max VCCBRAM
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:27>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmonget:0:32:27>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IS0\r32\r00002704\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'9547\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC command returned: VOLTS[0.84]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:27>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002704\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002704\r2\r:P\r9547\r~~~\r:P\rVOLTS[0.84]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:18]	Finished Get Min VCCBRAM
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:02>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmonget:0:32:02>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IS0\r32\r00000204\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'3799\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC command returned: VOLTS[1.8]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:02>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000204\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000204\r2\r:P\r3799\r~~~\r:P\rVOLTS[1.8]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:18]	Finished Get Current VCCAUX
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:22>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmonget:0:32:22>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IS0\r32\r00002204\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'E699\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	SYSC command returned: VOLTS[1.8]
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:22>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002204\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002204\r2\r:P\rE699\r~~~\r:P\rVOLTS[1.8]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:18]	Finished Get Max VCCAUX
+[INFO		:	Mon, 26, Mar 2018 09:31:18]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:26>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmonget:0:32:26>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IS0\r32\r00002604\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'8A98\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC command returned: VOLTS[1.79]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:26>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00002604\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00002604\r2\r:P\r8A98\r~~~\r:P\rVOLTS[1.79]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:19]	Finished Get Min VCCAUX
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:03>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmonget:0:32:03>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IS0\r32\r00000304\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'2E00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC command returned: VOLTS[0.0]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:03>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000304\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000304\r2\r:P\r2E00\r~~~\r:P\rVOLTS[0.0]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:19]	Finished Get VPVN
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:04>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmonget:0:32:04>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IS0\r32\r00000404\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'996A\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC command returned: VOLTS[1.25]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:04>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000404\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000404\r2\r:P\r996A\r~~~\r:P\rVOLTS[1.25]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:19]	Finished Get VREFP
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	SYSC Full Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:05>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	
+											Running sysc func: <setmux:0:75:07>
+[INFO		:	Mon, 26, Mar 2018 09:31:19]	u'IW0\r75\r07\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	
+											Running sysc func: <sysmoninit:0:32>
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\r00004108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\r00304008\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\rE17F4808\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\r00004908\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\rE1454A08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\r00004B08\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r32\rD0204108\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	
+											Running sysc func: <sysmonget:0:32:05>
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IS0\r32\r00000504\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'0000\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	
+											Running sysc func: <sysmoninterpvolt>
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	SYSC command returned: VOLTS[0.0]
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 09:31:20]	
+											SYSC Interpreted Command: [('<setmux:0:75:07>', '', '', ''), ('<sysmoninit:0:32>', '', '', ''), ('<sysmonget:0:32:05>', '', '', ''), ('<sysmoninterpvolt>', '', '', ''), ('<setmux:0:75:00>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r07\r\tIW0\r32\r00004108\r\tIW0\r32\r00304008\r\tIW0\r32\rE17F4808\r\tIW0\r32\r00004908\r\tIW0\r32\rE1454A08\r\tIW0\r32\r00004B08\r\tIW0\r32\rD0204108\r\tIS0\r32\r00000504\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r07\r:P\r~~~\r:P\rIW0\r32\r00004108\r:P\rIW0\r32\r00304008\r:P\rIW0\r32\rE17F4808\r:P\rIW0\r32\r00004908\r:P\rIW0\r32\rE1454A08\r:P\rIW0\r32\r00004B08\r:P\rIW0\r32\rD0204108\r:P\r~~~\r:P\rIS0\r32\r00000504\r2\r:P\r0000\r~~~\r:P\rVOLTS[0.0]~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 09:31:20]	Finished Get VREFN
+[TITLE		:	Mon, 26, Mar 2018 09:31:20]	Finished

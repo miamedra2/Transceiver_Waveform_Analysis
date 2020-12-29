@@ -1,0 +1,113 @@
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	Board: ZCU102
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	Revision: Rev. 1.0
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	Silicon: PROD
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	Serial Number: 
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Wed, 07, Oct 2020 11:39:57]	Working in directory: ZCU102
+[TITLE		:	Wed, 07, Oct 2020 11:40:00]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	Starting step sysc
+											==========
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'\x08\r:R\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'AF\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'A1\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'09\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'B5\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'MRS\r11\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'405C9797CD94EEC7\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	SYSC command returned: FREQUENCY[153.600 MHz]
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:00]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rAF\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rA1\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r09\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rB5\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C9797CD94EEC7\r~~~\r:P\rFREQUENCY[153.600 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 07, Oct 2020 11:40:00]	PASSED Read Si570 MGT Frequency at: 2020-10-07 11:40:00.545000
+[TITLE		:	Wed, 07, Oct 2020 11:40:00]	Finished
+[TITLE		:	Wed, 07, Oct 2020 11:40:01]	PRESSED: Read Si5328 Frequency
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	Starting step sysc
+											==========
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'\x08\r:R\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	SYSC Full Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	
+											Running sysc func: <getval:12>
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'MRS\r12\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'4063880000000000\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	
+											Running sysc func: <interpval>
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	SYSC command returned: VALUE[156.25]
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:01]	
+											SYSC Interpreted Command: [('<getval:12>', '', '', ''), ('<interpval>', '', '', '')]
+											SYSC RAW Command: u'MRS\r12\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rMRS\r12\r:P\r4063880000000000\r~~~\r:P\rVALUE[156.25]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 07, Oct 2020 11:40:01]	PASSED Read Si5328 Frequency at: 2020-10-07 11:40:01.341000
+[TITLE		:	Wed, 07, Oct 2020 11:40:01]	Finished
+[TITLE		:	Wed, 07, Oct 2020 11:40:02]	PRESSED: Read Si570 User Frequency
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	Starting step sysc
+											==========
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'\x08\r:R\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	SYSC Full Command: [('<setmux:1:74:04>', '', '', ''), ('<recallsi570:1:5d:10>', '', '', ''), ('<interpsi570:300>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	
+											Running sysc func: <setmux:1:74:04>
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IW1\r74\r04\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	
+											Running sysc func: <recallsi570:1:5d:10>
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'BC\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'00\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'65\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'B5\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'MRS\r10\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'405C9244FDD66B96\r~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	
+											Running sysc func: <interpsi570:300>
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	SYSC command returned: FREQUENCY[156.250 MHz]
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	u'~~~\r:P\r'
+[INFO		:	Wed, 07, Oct 2020 11:40:02]	
+											SYSC Interpreted Command: [('<setmux:1:74:04>', '', '', ''), ('<recallsi570:1:5d:10>', '', '', ''), ('<interpsi570:300>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r04\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r10\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r04\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBC\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r00\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r65\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rB5\rIW1\r5d\r8700\r:P\rMRS\r10\r:P\r405C9244FDD66B96\r~~~\r:P\rFREQUENCY[156.250 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 07, Oct 2020 11:40:02]	PASSED Read Si570 User Frequency at: 2020-10-07 11:40:02.596000
+[TITLE		:	Wed, 07, Oct 2020 11:40:02]	Finished

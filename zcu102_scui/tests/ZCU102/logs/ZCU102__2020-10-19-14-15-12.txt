@@ -1,0 +1,1816 @@
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	Board: ZCU102
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	Revision: Rev. 1.0
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	Silicon: PROD
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	Serial Number: 
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 19, Oct 2020 14:15:17]	Working in directory: ZCU102
+[TITLE		:	Mon, 19, Oct 2020 14:15:21]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:15:21]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'AF\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'A1\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'09\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'B5\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'MRS\r11\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'405C9797CD94EEC7\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	SYSC command returned: FREQUENCY[153.600 MHz]
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:22]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rAF\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rA1\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r09\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rB5\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C9797CD94EEC7\r~~~\r:P\rFREQUENCY[153.600 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:15:23]	PASSED Read Si570 MGT Frequency at: 2020-10-19 14:15:23.066000
+[TITLE		:	Mon, 19, Oct 2020 14:15:23]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:15:29]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'\x08\r:R\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:29]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:15:30]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:15:30.047000
+[TITLE		:	Mon, 19, Oct 2020 14:15:30]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:15:34]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'\x08\r:R\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:15:34]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:15:34]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:15:34.920000
+[TITLE		:	Mon, 19, Oct 2020 14:15:34]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:17:02]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:17:02]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:17:03]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:04]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:04]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:04]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:17:04]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:17:04.081000
+[TITLE		:	Mon, 19, Oct 2020 14:17:04]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:17:09]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'\x08\r:R\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:17:09]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:17:09]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:17:09.907000
+[TITLE		:	Mon, 19, Oct 2020 14:17:09]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:20:48]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:20:48]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:50]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:20:50]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:20:50.528000
+[TITLE		:	Mon, 19, Oct 2020 14:20:50]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:20:56]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'\x08\r:R\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:20:56]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:20:56]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:20:56.816000
+[TITLE		:	Mon, 19, Oct 2020 14:20:56]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:22:12]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:22:12]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'R\r\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:13]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:22:13]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:22:13.936000
+[TITLE		:	Mon, 19, Oct 2020 14:22:13]	Finished
+[TITLE		:	Mon, 19, Oct 2020 14:22:18]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	Starting step sysc
+											==========
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'\x08\r:R\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'DLY\r3A98\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	u'~~~\r:P\r'
+[INFO		:	Mon, 19, Oct 2020 14:22:18]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 19, Oct 2020 14:22:19]	PASSED Set Si570 MGT Frequency at: 2020-10-19 14:22:19.038000
+[TITLE		:	Mon, 19, Oct 2020 14:22:19]	Finished
+[TITLE		:	Tue, 20, Oct 2020 13:03:15]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Tue, 20, Oct 2020 13:03:15]	Starting step sysc
+											==========
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'AF\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'A1\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'09\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'B5\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'MRS\r11\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'405C9797CD94EEC7\r~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	SYSC command returned: FREQUENCY[153.600 MHz]
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:16]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rAF\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rA1\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r09\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rB5\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C9797CD94EEC7\r~~~\r:P\rFREQUENCY[153.600 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Tue, 20, Oct 2020 13:03:16]	PASSED Read Si570 MGT Frequency at: 2020-10-20 13:03:16.889000
+[TITLE		:	Tue, 20, Oct 2020 13:03:16]	Finished
+[TITLE		:	Tue, 20, Oct 2020 13:03:32]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	Starting step sysc
+											==========
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'\x08\r:R\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:32]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'DLY\r3A98\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:33]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Tue, 20, Oct 2020 13:03:33]	PASSED Set Si570 MGT Frequency at: 2020-10-20 13:03:33.291000
+[TITLE		:	Tue, 20, Oct 2020 13:03:33]	Finished
+[TITLE		:	Tue, 20, Oct 2020 13:03:39]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	Starting step sysc
+											==========
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'\x08\r:R\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'DLY\r3A98\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 13:03:39]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Tue, 20, Oct 2020 13:03:39]	PASSED Set Si570 MGT Frequency at: 2020-10-20 13:03:39.805000
+[TITLE		:	Tue, 20, Oct 2020 13:03:39]	Finished
+[TITLE		:	Tue, 20, Oct 2020 17:12:40]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Tue, 20, Oct 2020 17:12:40]	Starting step sysc
+											==========
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'DLY\r3A98\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	u'~~~\r:P\r'
+[INFO		:	Tue, 20, Oct 2020 17:12:41]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Tue, 20, Oct 2020 17:12:42]	PASSED Set Si570 MGT Frequency at: 2020-10-20 17:12:42.035000
+[TITLE		:	Tue, 20, Oct 2020 17:12:42]	Finished
+[TITLE		:	Wed, 21, Oct 2020 10:39:20]	PRESSED: Read Si570 MGT Frequency
+[INFO		:	Wed, 21, Oct 2020 10:39:20]	Starting step sysc
+											==========
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	
+											Running sysc func: <recallsi570:1:5d:11>
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:21]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'AF\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'A1\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'09\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'B5\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'MRS\r11\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'405C9797CD94EEC7\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	
+											Running sysc func: <interpsi570:156.25>
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	SYSC command returned: FREQUENCY[153.600 MHz]
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 10:39:22]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<recallsi570:1:5d:11>', '', '', ''), ('<interpsi570:156.25>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8700\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tMRS\r11\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8700\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rAF\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\rA1\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r09\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rB5\rIW1\r5d\r8700\r:P\rMRS\r11\r:P\r405C9797CD94EEC7\r~~~\r:P\rFREQUENCY[153.600 MHz]~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 21, Oct 2020 10:39:22]	PASSED Read Si570 MGT Frequency at: 2020-10-21 10:39:22.238000
+[TITLE		:	Wed, 21, Oct 2020 10:39:22]	Finished
+[TITLE		:	Wed, 21, Oct 2020 13:28:02]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Wed, 21, Oct 2020 13:28:02]	Starting step sysc
+											==========
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:03]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'DLY\r3A98\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:28:04]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 21, Oct 2020 13:28:04]	PASSED Set Si570 MGT Frequency at: 2020-10-21 13:28:04.253000
+[TITLE		:	Wed, 21, Oct 2020 13:28:04]	Finished
+[TITLE		:	Wed, 21, Oct 2020 13:31:10]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Wed, 21, Oct 2020 13:31:10]	Starting step sysc
+											==========
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'DLY\r3A98\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:11]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 21, Oct 2020 13:31:11]	PASSED Set Si570 MGT Frequency at: 2020-10-21 13:31:11.705000
+[TITLE		:	Wed, 21, Oct 2020 13:31:11]	Finished
+[TITLE		:	Wed, 21, Oct 2020 13:31:12]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	Starting step sysc
+											==========
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'\x08\r:R\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:12]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'DLY\r3A98\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:13]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 21, Oct 2020 13:31:13]	PASSED Set Si570 MGT Frequency at: 2020-10-21 13:31:13.252000
+[WARNING	:	Wed, 21, Oct 2020 13:31:13]	Stopping: Set Si570 MGT Frequency
+[TITLE		:	Wed, 21, Oct 2020 13:31:13]	Finished
+[TITLE		:	Wed, 21, Oct 2020 13:31:17]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	Starting step sysc
+											==========
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'\x08\r:R\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'DLY\r3A98\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	u'~~~\r:P\r'
+[INFO		:	Wed, 21, Oct 2020 13:31:17]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Wed, 21, Oct 2020 13:31:17]	PASSED Set Si570 MGT Frequency at: 2020-10-21 13:31:17.905000
+[TITLE		:	Wed, 21, Oct 2020 13:31:17]	Finished
+[TITLE		:	Wed, 21, Oct 2020 13:31:41]	PRESSED: Set Si5328 Frequency
+[ERROR		:	Wed, 21, Oct 2020 13:31:41]	
+											Malformed input found in Set Si5328 Frequency
+											Test canceled.
+[TITLE		:	Wed, 21, Oct 2020 13:31:41]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:01:35]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:01:35]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:36]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:01:37]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:01:37.079000
+[TITLE		:	Thu, 22, Oct 2020 05:01:37]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:01:41]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:01:41]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:01:42]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:01:42.130000
+[TITLE		:	Thu, 22, Oct 2020 05:01:42]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:02:03]	PRESSED: Set Si5328 Frequency
+[ERROR		:	Thu, 22, Oct 2020 05:02:03]	
+											Malformed input found in Set Si5328 Frequency
+											Test canceled.
+[TITLE		:	Thu, 22, Oct 2020 05:02:03]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:19:15]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:19:15]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:17]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:19:17]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:19:17.540000
+[TITLE		:	Thu, 22, Oct 2020 05:19:17]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:19:22]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:19:22]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:19:22]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:19:22.919000
+[TITLE		:	Thu, 22, Oct 2020 05:19:22]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:19:43]	PRESSED: Set Si5328 Frequency
+[ERROR		:	Thu, 22, Oct 2020 05:19:43]	
+											Malformed input found in Set Si5328 Frequency
+											Test canceled.
+[TITLE		:	Thu, 22, Oct 2020 05:19:43]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:35:57]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:35:58]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:35:59]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:35:59]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:35:59.751000
+[TITLE		:	Thu, 22, Oct 2020 05:35:59]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:36:00]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:36:00]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:36:01]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:36:01]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:36:01.571000
+[TITLE		:	Thu, 22, Oct 2020 05:36:01]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:45:35]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:45:35]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:36]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:45:36]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:45:36.902000
+[TITLE		:	Thu, 22, Oct 2020 05:45:36]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:45:41]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:45:41]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:42]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:42]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:45:42]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:45:42]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:45:42.112000
+[TITLE		:	Thu, 22, Oct 2020 05:45:42]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:53:36]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:53:36]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:37]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:38]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:53:38]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:53:38.166000
+[TITLE		:	Thu, 22, Oct 2020 05:53:38]	Finished
+[TITLE		:	Thu, 22, Oct 2020 05:53:43]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:43]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 05:53:44]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 05:53:44]	PASSED Set Si570 MGT Frequency at: 2020-10-22 05:53:44.467000
+[TITLE		:	Thu, 22, Oct 2020 05:53:44]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:19:50]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:19:50]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:51]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:19:52]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:19:52.003000
+[TITLE		:	Thu, 22, Oct 2020 10:19:52]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:19:55]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:19:55]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:19:55]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:19:55.825000
+[TITLE		:	Thu, 22, Oct 2020 10:19:55]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:22:55]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:22:55]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:22:56]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:22:56]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:22:56.818000
+[TITLE		:	Thu, 22, Oct 2020 10:22:56]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:23:02]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:23:02]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:23:02]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:23:02.652000
+[TITLE		:	Thu, 22, Oct 2020 10:23:02]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:30:02]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:30:02]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:03]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:04]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:30:04]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:30:04.261000
+[TITLE		:	Thu, 22, Oct 2020 10:30:04]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:30:09]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:09]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:30:10]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:30:10]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:30:10.199000
+[TITLE		:	Thu, 22, Oct 2020 10:30:10]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:58:25]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:58:25]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u':R\r\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:26]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u':R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:58:26]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:58:26.926000
+[TITLE		:	Thu, 22, Oct 2020 10:58:26]	Finished
+[TITLE		:	Thu, 22, Oct 2020 10:58:32]	PRESSED: Set Si570 MGT Frequency
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	Starting step sysc
+											==========
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'\x08\r:R\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	SYSC Full Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	
+											Running sysc func: <setmux:1:74:08>
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r74\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	
+											Running sysc func: <readsi570:1:5d>
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r8701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r07\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'01\rIW1\r5d\r08\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'C2\rIW1\r5d\r09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'BB\rIW1\r5d\r0a\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'7E\rIW1\r5d\r0b\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'10\rIW1\r5d\r0c\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IR1\r5d\r1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'F6\rIW1\r5d\r8700\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	
+											Running sysc func: <calcsi570:1:5d:156.25:153.6:01>
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r8910\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r0701\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r08c2\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r09af\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r0aa1\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r0b09\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r5d\r0cb5\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'DLY\r3A98\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IC1\r5d\r2\r8900\r8740\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'MWS\r01\r405c9797cd94eec7\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	
+											Running sysc func: <setmux:1:74:00>
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'IW1\r74\r00\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	u'~~~\r:P\r'
+[INFO		:	Thu, 22, Oct 2020 10:58:32]	
+											SYSC Interpreted Command: [('<setmux:1:74:08>', '', '', ''), ('<readsi570:1:5d>', '', '', ''), ('<calcsi570:1:5d:156.25:<1>:01>', '', '', ''), ('<setmux:1:74:00>', '', '', '')]
+											SYSC RAW Command: u'IW1\r74\r08\r\tIW1\r5d\r8701\r\tIW1\r5d\r07\r\tIR1\r5d\r1\r\tIW1\r5d\r08\r\tIR1\r5d\r1\r\tIW1\r5d\r09\r\tIR1\r5d\r1\r\tIW1\r5d\r0a\r\tIR1\r5d\r1\r\tIW1\r5d\r0b\r\tIR1\r5d\r1\r\tIW1\r5d\r0c\r\tIR1\r5d\r1\r\tIW1\r5d\r8700\r\tIW1\r5d\r8910\r\tIW1\r5d\r0701\r\tIW1\r5d\r08c2\r\tIW1\r5d\r09af\r\tIW1\r5d\r0aa1\r\tIW1\r5d\r0b09\r\tIW1\r5d\r0cb5\r\tDLY\r3A98\r\tIC1\r5d\r2\r8900\r8740\r\tMWS\r01\r405c9797cd94eec7\r\tIW1\r74\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW1\r74\r08\r:P\r~~~\r:P\rIW1\r5d\r8701\r:P\rIW1\r5d\r07\r:P\rIR1\r5d\r1\r:P\r01\rIW1\r5d\r08\r:P\rIR1\r5d\r1\r:P\rC2\rIW1\r5d\r09\r:P\rIR1\r5d\r1\r:P\rBB\rIW1\r5d\r0a\r:P\rIR1\r5d\r1\r:P\r7E\rIW1\r5d\r0b\r:P\rIR1\r5d\r1\r:P\r10\rIW1\r5d\r0c\r:P\rIR1\r5d\r1\r:P\rF6\rIW1\r5d\r8700\r:P\r~~~\r:P\rIW1\r5d\r8910\r:P\rIW1\r5d\r0701\r:P\rIW1\r5d\r08c2\r:P\rIW1\r5d\r09af\r:P\rIW1\r5d\r0aa1\r:P\rIW1\r5d\r0b09\r:P\rIW1\r5d\r0cb5\r:P\rDLY\r3A98\r:P\rIC1\r5d\r2\r8900\r8740\r:P\rMWS\r01\r405c9797cd94eec7\r:P\r~~~\r:P\rIW1\r74\r00\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Thu, 22, Oct 2020 10:58:32]	PASSED Set Si570 MGT Frequency at: 2020-10-22 10:58:32.622000
+[TITLE		:	Thu, 22, Oct 2020 10:58:32]	Finished

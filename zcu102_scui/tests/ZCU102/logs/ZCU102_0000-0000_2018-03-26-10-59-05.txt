@@ -1,0 +1,490 @@
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 10:59:11]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 10:59:15]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 10:59:15]	Starting step sysc
+											==========
+[ERROR		:	Mon, 26, Mar 2018 10:59:26]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 10:59:26]	Timeout reached while waiting for occurance
+[ERROR		:	Mon, 26, Mar 2018 10:59:26]	The serial port does not seem to be responding...
+											Is the board on?
+[TITLE		:	Mon, 26, Mar 2018 10:59:26]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 10:59:26]	Finished
+[TITLE		:	Mon, 26, Mar 2018 10:59:51]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 10:59:51]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 10:59:51]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	u'VRN\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	u'MSP v1.10 I2C Bridge v1.30\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 10:59:52]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.10 I2C Bridge v1.30\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 10:59:52]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 10:59:52]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:00:04]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 11:00:04]	Starting step sysc
+											==========
+[ERROR		:	Mon, 26, Mar 2018 11:00:15]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 11:00:25]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 11:00:25]	Timeout reached while waiting for occurance
+[ERROR		:	Mon, 26, Mar 2018 11:00:25]	The serial port does not seem to be responding...
+											Is the board on?
+[TITLE		:	Mon, 26, Mar 2018 11:00:25]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 11:00:25]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:01:26]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 11:01:26]	Starting step sysc
+											==========
+[ERROR		:	Mon, 26, Mar 2018 11:01:37]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 11:01:47]	Error in waitingforoccurance
+											Traceback (most recent call last):
+											  File "testthread.py", line 245, in waitforoccurance
+											  File "Queue.py", line 176, in get
+											Empty
+[ERROR		:	Mon, 26, Mar 2018 11:01:47]	Timeout reached while waiting for occurance
+[ERROR		:	Mon, 26, Mar 2018 11:01:47]	The serial port does not seem to be responding...
+											Is the board on?
+[TITLE		:	Mon, 26, Mar 2018 11:01:47]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 11:01:47]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:02:34]	PRESSED: Set Si570 User Frequency
+[ERROR		:	Mon, 26, Mar 2018 11:02:34]	
+											Malformed input found in Set Si570 User Frequency
+											Test canceled.
+[TITLE		:	Mon, 26, Mar 2018 11:02:34]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:02:38]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 11:02:38]	Starting step sysc
+											==========
+[ERROR		:	Mon, 26, Mar 2018 11:02:39]	Could not connect to Serial Port. Is it being held up by another program?
+[TITLE		:	Mon, 26, Mar 2018 11:02:39]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 11:02:39]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:02:46]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	u'VRN\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	u'MSP v1.10 I2C Bridge v1.30\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:46]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.10 I2C Bridge v1.30\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:46]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 11:02:46]	Finished
+[TITLE		:	Mon, 26, Mar 2018 11:02:51]	PRESSED: Run all
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <getvoltage:0:0A>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IS0\r0A\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'14\rIS0\r0A\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'990D\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	SYSC command returned: VOLTAGE[0.85 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r0A\r20\r1\r\tIS0\r0A\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r0A\r20\r1\r:P\r14\rIS0\r0A\r8B\r2\r:P\r990D\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:51]	Finished Get PSINTFP Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0B>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <getvoltage:0:0B>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IS0\r0B\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'14\rIS0\r0B\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'9A0D\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	SYSC command returned: VOLTAGE[0.85 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:0B>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r0B\r20\r1\r\tIS0\r0B\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r0B\r20\r1\r:P\r14\rIS0\r0B\r8B\r2\r:P\r9A0D\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:51]	Finished Get PSINTLP Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:51]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:10>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <getvoltage:0:10>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IS0\r10\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'14\rIS0\r10\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'CC1C\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC command returned: VOLTAGE[1.80 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:10>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r10\r20\r1\r\tIS0\r10\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r10\r20\r1\r:P\r14\rIS0\r10\r8B\r2\r:P\rCC1C\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.80 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:52]	Finished Get VCCOPS Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1D>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <getvoltage:0:1D>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IS0\r1D\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'14\rIS0\r1D\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'3213\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC command returned: VOLTAGE[1.20 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1D>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r1D\r20\r1\r\tIS0\r1D\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r1D\r20\r1\r:P\r14\rIS0\r1D\r8B\r2\r:P\r3213\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.20 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:52]	Finished Get DDR4_DIMM_VDDQ
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:13>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <getvoltage:0:13>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IS0\r13\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'14\rIS0\r13\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'990D\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC command returned: VOLTAGE[0.85 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:13>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r13\r20\r1\r\tIS0\r13\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r13\r20\r1\r:P\r14\rIS0\r13\r8B\r2\r:P\r990D\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:52]	Finished Get VCCINT Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	
+											Running sysc func: <getvoltage:0:14>
+[INFO		:	Mon, 26, Mar 2018 11:02:52]	u'IS0\r14\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'14\rIS0\r14\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'9B0D\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC command returned: VOLTAGE[0.85 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:14>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r14\r20\r1\r\tIS0\r14\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r14\r20\r1\r:P\r14\rIS0\r14\r8B\r2\r:P\r9B0D\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.85 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:53]	Finished Get VCCBRAM Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <getvoltage:0:15>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IS0\r15\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'14\rIS0\r15\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'CB1C\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC command returned: VOLTAGE[1.80 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:15>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r15\r20\r1\r\tIS0\r15\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r15\r20\r1\r:P\r14\rIS0\r15\r8B\r2\r:P\rCB1C\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.80 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:53]	Finished Get VCCAUX Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:16>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <getvoltage:0:16>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IS0\r16\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'14\rIS0\r16\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'3313\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC command returned: VOLTAGE[1.20 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:16>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r16\r20\r1\r\tIS0\r16\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r16\r20\r1\r:P\r14\rIS0\r16\r8B\r2\r:P\r3313\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.20 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:53]	Finished Get VCC1V2 Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:17>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <getvoltage:0:17>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IS0\r17\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'14\rIS0\r17\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'CB34\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	SYSC command returned: VOLTAGE[3.30 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:17>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r17\r20\r1\r\tIS0\r17\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r17\r20\r1\r:P\r14\rIS0\r17\r8B\r2\r:P\rCB34\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[3.30 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:53]	Finished Get VCC3V3 Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:53]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:18>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <getvoltage:0:18>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IS0\r18\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'14\rIS0\r18\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'CD1C\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC command returned: VOLTAGE[1.80 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:18>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r18\r20\r1\r\tIS0\r18\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r18\r20\r1\r:P\r14\rIS0\r18\r8B\r2\r:P\rCD1C\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.80 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:54]	Finished Get VADJ_FMC Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <getvoltage:0:72>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IS0\r72\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'20\rIS0\r72\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'8300\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <calcvoltage70>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC command returned: VOLTAGE[0.90 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:72>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r72\r20\r1\r\tIS0\r72\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r72\r20\r1\r:P\r20\rIS0\r72\r8B\r2\r:P\r8300\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[0.90 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:54]	Finished Get MGTAVCC Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <getvoltage:0:73>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IS0\r73\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'20\rIS0\r73\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'BF00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <calcvoltage70>
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC command returned: VOLTAGE[1.20 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:73>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage70>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r73\r20\r1\r\tIS0\r73\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r73\r20\r1\r:P\r20\rIS0\r73\r8B\r2\r:P\rBF00\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[1.20 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:54]	Finished Get MGTAVTT Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:54]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <getvoltage:0:1A>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IS0\r1A\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'14\rIS0\r1A\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'C534\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	SYSC command returned: VOLTAGE[3.30 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1A>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r1A\r20\r1\r\tIS0\r1A\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r1A\r20\r1\r:P\r14\rIS0\r1A\r8B\r2\r:P\rC534\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[3.30 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:55]	Finished Get UTIL3V3 Voltage
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	SYSC Full Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <setmux:0:75:06>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IW0\r75\r06\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <getvoltage:0:1B>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IS0\r1B\r20\r1\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'14\rIS0\r1B\r8B\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'0050\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <setmux:0:75:00>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'IW0\r75\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											Running sysc func: <calcvoltage>
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	SYSC command returned: VOLTAGE[5.00 Volts]
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 11:02:55]	
+											SYSC Interpreted Command: [('<setmux:0:75:06>', '', '', ''), ('<getvoltage:0:1B>', '', '', ''), ('<setmux:0:75:00>', '', '', ''), ('<calcvoltage>', '', '', '')]
+											SYSC RAW Command: u'IW0\r75\r06\r\tIS0\r1B\r20\r1\r\tIS0\r1B\r8B\r2\r\tIW0\r75\r00\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIW0\r75\r06\r:P\r~~~\r:P\rIS0\r1B\r20\r1\r:P\r14\rIS0\r1B\r8B\r2\r:P\r0050\r~~~\r:P\rIW0\r75\r00\r:P\r~~~\r:P\rVOLTAGE[5.00 Volts]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 11:02:55]	Finished Get UTIL5V0 Voltage
+[TITLE		:	Mon, 26, Mar 2018 11:02:55]	Finished

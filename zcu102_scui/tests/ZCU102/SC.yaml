@@ -1,0 +1,2139 @@
+tabs:
+  Clocks:
+    tabs:
+      Set:
+        buttons:
+          Set SI5341 Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:02><writeSIClockFromFile:1:36:clockBuilder:<1>><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              hidden: true
+              content:
+              - label_right: 'Type in file name located in clockBuilder:'
+              - input: ^(.*)$
+          Set Si570 User Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:04><readsi570:1:5d><calcsi570:1:5d:300:<1>:00><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              - label_left: (between 10 and 800 MHz)
+          Set Si570 MGT Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:08><readsi570:1:5d><calcsi570:1:5d:156.25:<1>:01><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              - label_left: (between 10 and 800 MHz)
+          Set Si5328 Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:10><calcsi5328:1:69:<1>><saveval:12:<1>><setmux:1:74:00>
+            #- command: <setmux:1:74:10><calcsi5328:1:69:<1>><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+              - label_left: (between 0.008 and 808 MHz)
+      Read:
+        buttons:
+          Read Si570 User Frequency:
+            steps:
+            - command: <setmux:1:74:04><recallsi570:1:5d:10><interpsi570:300><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - label_right: 'Frequency: '
+              - output_left_large: .*FREQUENCY\[(.*)\]
+          Read Si570 MGT Frequency:
+            steps:
+            - command: <setmux:1:74:08><recallsi570:1:5d:11><interpsi570:156.25><setmux:1:74:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - label_right: 'Frequency: '
+              - output_left_large: .*FREQUENCY\[(.*)\]
+          Read Si5328 Frequency:
+            steps:
+            - command: <getval:12><interpval>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - label_right: 'Frequency: '
+              - output_left_medium: .*VALUE\[(.*)\]
+      Set Boot Frequency:
+        buttons:
+          Si570 User Boot Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:04><readsi570:1:5d><recordrunonboot:00><setmux:1:74:04><calcsi570:1:5d:300:<1>><setmux:1:74:00><stoprecord><calcsi570:1:5d:300:<1>:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              - label_left: (between 10 and 800 MHz)
+          Si570 MGT Boot Frequency:
+            timeout: 10
+            steps:
+            - command: <setmux:1:74:08><readsi570:1:5d><recordrunonboot:01><setmux:1:74:08><calcsi570:1:5d:156.25:<1>><setmux:1:74:00><stoprecord><calcsi570:1:5d:156.25:<1>:01>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              - label_left: (between 10 and 800 MHz)
+          Set Si5328 Boot Frequency:
+            timeout: 10
+            steps:
+            - command: <recordrunonboot:02><setmux:1:74:10><calcsi5328:1:69:<1>><setmux:1:74:00><stoprecord><saveval:02:<1>>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 3
+              content:
+              - label_right: 'Frequency:'
+              - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+              - label_left: '(between 0.008 and 808 MHz):'
+      Restore Device Defaults:
+        buttons:
+          Si570 User:
+            timeout: 10
+            steps:
+            - command: "MDB\r00\r\t<setmux:1:74:04><readsi570:1:5d><calcsi570:1:5d:300:300:00><setmux:1:74:00>"
+              type: sysc
+          Si570 MGT:
+            timeout: 10
+            steps:
+            - command: "MDB\r01\r\t<setmux:1:74:08><readsi570:1:5d><calcsi570:1:5d:156.25:156.25:01><setmux:1:74:00>"
+              type: sysc
+          Si5328:
+            timeout: 10
+            steps:
+            - command: "MDB\r02\r\t<saveval:02:0.0000001>"
+              type: sysc
+  Voltages:
+    buttons:
+      Run all:
+        runchecked: true
+      Get PSINTFP Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:0A><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get PSINTLP Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:0B><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCCOPS Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:10><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get DDR4_DIMM_VDDQ:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:1D><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCCINT Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:13><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCCBRAM Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:14><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCCAUX Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:15><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCC1V2 Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:16><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VCC3V3 Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:17><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get VADJ_FMC Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:18><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get MGTAVCC Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:72><setmux:0:75:00><calcvoltage70>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get MGTAVTT Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:73><setmux:0:75:00><calcvoltage70>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get UTIL3V3 Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:1A><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+      Get UTIL5V0 Voltage:
+        steps:
+        - command: <setmux:0:75:06><getvoltage:0:1B><setmux:0:75:00><calcvoltage>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Voltage: '
+          - output_left_large: .*VOLTAGE\[(.*)\]
+  Power:
+    tabs:
+      Use Default Calibration:
+        tabs:
+          PS Side:
+            buttons:
+              Run all:
+                runchecked: true
+              PSINTFP:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:40:10:0.005:00><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSINTLP:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:41:2:0.005:00><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSAUX:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:42:0.5:0.005:00><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSPLL:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:43:0.2:0.005:00><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTRAVCC:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:44:0.4:0.005:00><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTRAVTT:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:45:0.1:0.005:00><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCOPS:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:47:4:0.005:00><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCOPS3:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:4a:0.3:0.005:00><getINA226:0:4a:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSDDRPLL:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:4b:0.1:0.005:00><getINA226:0:4b:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSDDR_504:
+                steps:
+                - command: <setmux:0:75:04><calINA226:0:46:6:0.005:00><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          PL Side:
+            buttons:
+              Run all:
+                runchecked: true
+              VCCINT:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:40:40:0.002:00><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCBRAM:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:41:6:0.005:00><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCAUX:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:42:3:0.005:00><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCC1V2:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:43:2:0.005:00><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCC3V3:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:44:5:0.005:00><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VADJ_FMC:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:45:10:0.005:00><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTAVCC:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:46:6:0.005:00><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTAVTT:
+                steps:
+                - command: <setmux:0:75:05><calINA226:0:47:6:0.005:00><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+      Use Custom Calibration:
+        tabs:
+          PS Side:
+            buttons:
+              Run all:
+                runchecked: true
+              PSINTFP:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSINTLP:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSAUX:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSPLL:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTRAVCC:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTRAVTT:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCOPS:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCOPS3:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:4a:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSDDRPLL:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:4b:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              PSDDR_504:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+          PL Side:
+            buttons:
+              Run all:
+                runchecked: true
+              VCCINT:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCBRAM:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCCAUX:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCC1V2:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VCC3V3:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              VADJ_FMC:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTAVCC:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+              MGTAVTT:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 6
+                  content:
+                  - label_right: 'Power: '
+                  - output_large_left: .*\[power:([0-9]*(\.[0-9]*)?\sWatts\s)volts:.*amps:.*\].*
+                  - label_right: '  Voltage: '
+                  - output_large_left: .*\[power:.*volts:([0-9]*(\.[0-9]*)?\sVolts\s)amps:.*\].*
+                  - label_right: '  Current: '
+                  - output_large_left: .*\[power:.*volts:.*amps:(?:-)?([0-9]*(\.[0-9]*)?\sAmps\s)\].*
+      Get INA226 Registers:
+        tabs:
+          PS Side:
+            buttons:
+              Run all:
+                runchecked: true
+              PSINITFP:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              PSINITLP:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              PSAUX:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              PSPLL:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              MGTRAVCC:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              MGTRAVTT:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCCOPS:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCCOPS3:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:4a:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              PSDDRPLL:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:4b:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              PSDDR_504:
+                steps:
+                - command: <setmux:0:75:04><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+          PL Side:
+            buttons:
+              Run all:
+                runchecked: true
+              VCCINT:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:40:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCCBRAM:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:41:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCCAUX:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:42:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCC1V2:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:43:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VCC3V3:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:44:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              VADJ_FMC:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:45:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              MGTAVCC:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:46:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+              MGTAVTT:
+                steps:
+                - command: <setmux:0:75:05><getINA226:0:47:00><interpINA226:0><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 3
+                  columns: 6
+                  content:
+                  - label_right: 'Configuration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4})\].*
+                  - label_right: 'Shunt Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4}\].*
+                  - label_right: 'Bus Voltage: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Power: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Current: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Calibration: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Mask/Enable: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Alert Limit: '
+                  - output_medium_left: .*\[REGISTERS:[0-9a-fA-f]{4},[0-9a-fA-f]{4},([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+                  - label_right: 'Die ID: '
+                  - output_medium_left: .*\[REGISTERS:([0-9a-fA-f]{4}),[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4},[0-9a-fA-f]{4}\].*
+      Set INA226 Registers:
+        tabs:
+          PS Side:
+            buttons:
+              PSINITFP:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:40:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              PSINITLP:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:41:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              PSAUX:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:42:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              PSPLL:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:43:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              MGTRAVCC:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:44:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              MGTRAVTT:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:45:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCCOPS:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:47:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCCOPS3:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:4a:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              PSDDRPLL:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:4b:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              PSDDR_504:
+                steps:
+                - command: <setmux:0:75:04><setINA226:0:46:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+          PL Side:
+            buttons:
+              VCCINT:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:40:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCCBRAM:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:41:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCCAUX:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:42:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCC1V2:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:43:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VCC3V3:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:44:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              VADJ_FMC:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:45:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              MGTAVCC:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:46:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+              MGTAVTT:
+                steps:
+                - command: <setmux:0:75:05><setINA226:0:47:<1>:<3>:<5>:<7>:00:0.005><setmux:0:75:00>
+                  type: sysc
+                ui:
+                  rows: 2
+                  columns: 4
+                  content:
+                  - label_right: 'Configuration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Calibration: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: 'Mask/Enable: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+                  - label_right: '  Alert Limit: '
+                  - input: (^[0-9a-fA-F]{4}$)|(^$)
+  FMC:
+    tabs:
+      Set VADJ:
+        tabs:
+          Current:
+            buttons:
+              Set VADJ to 0.0 V:
+                steps:
+                - command: <setmux:0:75:06><setMAX15303voltage:0:18:0><setmux:0:75:00>
+                  type: sysc
+              Set VADJ to 1.2 V:
+                steps:
+                - command: <setmux:0:75:06><setMAX15303voltage:0:18:1.2><setmux:0:75:00>
+                  type: sysc
+              Set VADJ to 1.5 V:
+                steps:
+                - command: <setmux:0:75:06><setMAX15303voltage:0:18:1.5><setmux:0:75:00>
+                  type: sysc
+              Set VADJ to 1.8 V:
+                steps:
+                - command: <setmux:0:75:06><setMAX15303voltage:0:18:1.8><setmux:0:75:00>
+                  type: sysc
+          Bootup:
+            buttons:
+              Set VADJ to 0.0 V:
+                steps:
+                - command: <recordrunonboot:EF><setmux:0:75:06><setMAX15303voltage:0:18:0><setmux:0:75:00><stoprecord>
+                  type: sysc
+              Set VADJ to 1.2 V:
+                steps:
+                - command: <recordrunonboot:EF><setmux:0:75:06><setMAX15303voltage:0:18:1.2><setmux:0:75:00><stoprecord>
+                  type: sysc
+              Set VADJ to 1.5 V:
+                steps:
+                - command: <recordrunonboot:EF><setmux:0:75:06><setMAX15303voltage:0:18:1.5><setmux:0:75:00><stoprecord>
+                  type: sysc
+              Set VADJ to 1.8 V:
+                steps:
+                - command: <recordrunonboot:EF><setmux:0:75:06><setMAX15303voltage:0:18:1.8><setmux:0:75:00><stoprecord>
+                  type: sysc
+              Use FMC EEPROM Voltage:
+                steps:
+                - command: "MDB\rEF\r\tMWB\rF2\r\tIW0\r75\r06\r\tIR0\r18\r01\r\t\b\
+                    MWB\rF1\r\tIW1\r75\r02\r\tIR1\r50\r01\r\t\bMWB\rF0\r\tIW1\r75\r\
+                    01\r\tIR1\r50\r01\r\t\b"
+                  type: sysc
+      HPC0:
+        tabs:
+          EEPROM:
+            buttons:
+              Get EEPROM Data:
+                steps:
+                - command: <setmux:1:75:01><readeeprom:1:50:00:FF><literaleeprom:T><interpeeprom><setmux:1:75:00>
+                  type: sysc
+          XM101:
+            buttons:
+              Set SI570_0:
+                steps:
+                - command: <setmux:1:75:01><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI570_1:
+                steps:
+                - command: <setmux:1:75:01><setmux:1:70:02><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM104:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:01><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI5368:
+                steps:
+                - command: <setmux:1:75:01><setmux:1:70:01><calcsi5368:1:68:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (0.008-808MHz):'
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+          XM105:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM107:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:01><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+      HPC1:
+        tabs:
+          EEPROM:
+            buttons:
+              Get EEPROM Data:
+                steps:
+                - command: <setmux:1:75:02><readeeprom:1:50:00:FF><literaleeprom:T><interpeeprom><setmux:1:75:00>
+                  timeout: 5
+                  type: sysc
+          XM101:
+            buttons:
+              Set SI570_0:
+                steps:
+                - command: <setmux:1:75:02><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI570_1:
+                steps:
+                - command: <setmux:1:75:02><setmux:1:70:02><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM104:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:02><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+              Set SI5368:
+                steps:
+                - command: <setmux:1:75:02><setmux:1:70:01><calcsi5368:1:68:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (0.008-808MHz):'
+                  - input: (^0*\.00[8-9]$)|(^0*\.0[1-9][0-9]*$)|(^0*\.[1-9][0-9]*$)|(^[1-9](\.[0-9]*)?$)|(^[1-9][0-9](\.[0-9]*)?$)|(^[1-7][0-9][0-9](\.[0-9]*)?$)|(^80[0-7](\.[0-9]*)?$)|(^808(\.0*)?$)
+          XM105:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:02><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+          XM107:
+            buttons:
+              Set SI570:
+                steps:
+                - command: <setmux:1:75:02><setmux:1:70:01><readsi570:1:5d><calcsi570:1:5d:156.25:<1>><setmux:1:70:00><setmux:1:75:00>
+                  type: sysc
+                ui:
+                  rows: 1
+                  columns: 2
+                  content:
+                  - label_right: 'Frequency (10-800MHz):'
+                  - input: ^((10)|(810)|((([1-7][0-9][0-9])|([1-9][0-9])|(80[0-9]))(\.[0-9]*)?))$
+  GTR MUX:
+    buttons:
+      Get MUX Setting:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:00:00:00:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'MUX is set to: '
+          - output_huge_left: .*\[P0P1:.{4}(.{4}).{8}\]
+      Set MUX to 0000:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:00:0F:00:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 1
+          content:
+          - label_right: PCIe x4
+      Set MUX to 1100:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:0C:0F:00:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 1
+          content:
+          - label_right: PCIe x2, USB, SATA
+      Set MUX to 1110:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:0E:0F:00:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 1
+          content:
+          - label_right: PCIe x1, DP x1, USB, SATA
+      Set MUX to 1111:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:0F:0F:00:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 1
+          content:
+          - label_right: DP x2, USB, SATA
+  EEPROM Data:
+    buttons:
+      Run all:
+        runchecked: true
+      Get Board Name:
+        steps:
+        - command: <setmux:1:74:01><readeeprom:1:54:D0:10><interpeeprom><setmux:1:74:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Name: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]L
+      Get Board Revision:
+        steps:
+        - command: <setmux:1:74:01><readeeprom:1:54:E0:03><interpeeprom><setmux:1:74:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Revision: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]L
+      Get Serial Number:
+        steps:
+        - command: <setmux:1:74:01><readeeprom:1:54:00:20><interpeeprom><setmux:1:74:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board Serial Number: '
+          - output_huge_left: .*INTERP\[([\x00-\x7F]*).*?\]L
+      Get MAC Address:
+        steps:
+        - command: <setmux:1:74:01><readeeprom:1:54:20:06><literaleeprom:F><setmux:1:74:00>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'Board MAC Address: '
+          - output_huge_left: .*LITERAL\[(.{12}).*?\]
+  GPIO Commands:
+    buttons:
+      Blink LEDs:
+        steps:
+        - command: <mspblinkled:6>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 1
+      Get DIP Switch:
+        steps:
+        - command: <mspgpiostate:10><mspinterpstate>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'State: '
+          - output_large_left: .*GPIO\[...(.....)\]
+      Get PMU Bits:
+        steps:
+        - command: <mspgpiostate:11><mspinterpstate>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 2
+          content:
+          - label_right: 'State: '
+          - output_large_left: .*GPIO\[..(......)\]
+      Get PS GPIO:
+        steps:
+        - command: <mspgpioset:24:00><mspgpioset:25:00><mspgpiostate:24><mspgpiostate:25>
+          type: sysc
+        ui:
+          rows: 1
+          columns: 4
+          content:
+          - label_right: 'PS_0 State: '
+          - output_medium_left: ".*GPR\r..\r:P\r.(.)\r.*GPR"
+          - label_right: 'PS_1 State: '
+          - output_medium_left: ".*GPR.*GPR\r..\r:P\r.(.)\r"
+      Get PL GPIO:
+        steps:
+        - command: <mspgpioset:20:00><mspgpioset:21:00><mspgpioset:22:00><mspgpioset:23:00><mspgpiostate:20><mspgpiostate:21><mspgpiostate:22><mspgpiostate:23>
+          type: sysc
+        ui:
+          rows: 2
+          columns: 4
+          content:
+          - label_right: 'PL_0 State: '
+          - output_medium_left: ".*GPR\r..\r:P\r.(.)\r.*GPR.*GPR.*GPR"
+          - label_right: 'PL_1 State: '
+          - output_medium_left: ".*GPR.*GPR\r..\r:P\r.(.)\r.*GPR.*GPR"
+          - label_right: 'PL_2 State: '
+          - output_medium_left: ".*GPR.*GPR.*GPR\r..\r:P\r.(.)\r.*GPR"
+          - label_right: 'PL_4 State: '
+          - output_medium_left: ".*GPR.*GPR.*GPR.*GPR\r..\r:P\r.(.)\r"
+      Get GTR Expander Bits:
+        steps:
+        - command: <readtca6416:0:20><settca6416:0:20:00:00:00:00>
+          type: sysc
+        ui:
+          rows: 2
+          columns: 2
+          content:
+          - label_right: 'P0 State: '
+          - output_large_left: .*\[P0P1:(.{8}).{8}\]
+          - label_right: '    P1 State: '
+          - output_large_left: .*\[P0P1:(.{8}).{8}\]
+      Get PWR Expander Bits:
+        steps:
+        - command: <readtca6416:0:21><settca6416:0:21:00:00:00:00>
+          type: sysc
+        ui:
+          rows: 2
+          columns: 2
+          content:
+          - label_right: 'P0 State: '
+          - output_large_left: .*\[P0P1:(.{8}).{8}\]
+          - label_right: '    P1 State: '
+          - output_large_left: .*\[P0P1:(.{8}).{8}\]
+      Set PMU MIO26 = 1:
+        steps:
+        - command: <readtca6416:0:21><settca6416:0:21:10:10:00:00>
+          type: sysc
+      Set PMU MIO26 = 0:
+        steps:
+        - command: <readtca6416:0:21><settca6416:0:21:00:10:00:00>
+          type: sysc
+  System Monitor:
+    tabs:
+      Temperatures:
+        buttons:
+          Run all:
+            runchecked: true
+          Get Current Temp:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:00><sysmoninterptemp><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*TEMP\[(.*)\]
+              - label_left: ' °C'
+          Get Max Temp:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:20><sysmoninterptemp><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*TEMP\[(.*)\]
+              - label_left: ' °C'
+          Get Min Temp:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:24><sysmoninterptemp><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*TEMP\[(.*)\]
+              - label_left: ' °C'
+      Voltages:
+        buttons:
+          Run all:
+            runchecked: true
+          Get Current VCCINT:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:01><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Max VCCINT:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:21><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+
+          Get Min VCCINT:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:25><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Current VCCBRAM:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:06><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Max VCCBRAM:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:23><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Min VCCBRAM:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:27><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Current VCCAUX:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:02><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Max VCCAUX:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:22><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get Min VCCAUX:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:26><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get VPVN:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:03><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get VREFP:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:04><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+          Get VREFN:
+            steps:
+            - command: <setmux:0:75:07><sysmoninit:0:32><sysmonget:0:32:05><sysmoninterpvolt><setmux:0:75:00>
+              type: sysc
+            ui:
+              rows: 1
+              columns: 2
+              content:
+              - output_medium_right: .*VOLTS\[(.*)\]
+              - label_left: ' Volts'
+  About:
+    buttons:
+      Get Version:
+        steps:
+        - command: "VRN\r\t"
+          timeout: 10
+          type: sysc
+        ui:
+          rows: 2
+          columns: 2
+          content:
+          - label_right: 'Firmware version:'
+          - output_huge_left: ".*VRN\r:P\r(.*)\r"
+          - label_right: 'UI Version: '
+          - label_left: SCUI v1.1

@@ -1,0 +1,21 @@
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 12:01:07]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 12:01:11]	PRESSED: Get Version
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	SYSC Full Command: [('', 'VRN', '', '')]
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	u'VRN\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	u'MSP v1.50 I2C Bridge v1.50\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 12:01:11]	
+											SYSC Interpreted Command: [('', 'VRN', '', '')]
+											SYSC RAW Command: u'VRN\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rVRN\r:P\rMSP v1.50 I2C Bridge v1.50\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 12:01:11]	Finished Get Version
+[TITLE		:	Mon, 26, Mar 2018 12:01:11]	Finished

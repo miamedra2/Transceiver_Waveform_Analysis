@@ -1,0 +1,16 @@
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	C:\Users\jamesm\AppData\Local\Temp\_MEI81~1\ruamel\yaml\constructor.py:262: DuplicateKeyFutureWarning: while constructing a mapping
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	  in "C:\zcu102_scui\tests\ZCU102\SC.yaml", line 2120, column 9
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	found duplicate key "ui" with value "ordereddict([])" (original value: "ordereddict([])")
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	  in "C:\zcu102_scui\tests\ZCU102\SC.yaml", line 2132, column 9
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	To suppress this check see:
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	    http://yaml.readthedocs.io/en/latest/api.html#duplicate-keys
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	Duplicate keys will become and error in future releases, and are errors
+[ERROR		:	Mon, 26, Mar 2018 11:57:27]	by default when using the new API.
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 11:57:33]	Working in directory: ZCU102

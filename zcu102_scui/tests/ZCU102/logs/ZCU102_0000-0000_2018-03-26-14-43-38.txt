@@ -1,0 +1,166 @@
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	Board: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	Revision: Rev. 1.0
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	Silicon: Prod
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	Serial Number: 0000-0000
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	MAC Address: 01:02:03:04:05:06
+[TITLE		:	Mon, 26, Mar 2018 14:43:47]	Working in directory: ZCU102
+[TITLE		:	Mon, 26, Mar 2018 14:43:55]	PRESSED: Get GTR Expander Bits
+[INFO		:	Mon, 26, Mar 2018 14:43:55]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:43:55]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:55]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:55]	SYSC Full Command: [('<readtca6416:0:20>', '', '', ''), ('<settca6416:0:20:00:00:00:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:43:55]	
+											Running sysc func: <readtca6416:0:20>
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	u'IS0\r20\r02\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	u'FFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	
+											Running sysc func: <settca6416:0:20:00:00:00:00>
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	SYSC command returned: [P0P1:1111111111111111]
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	u'IW0\r20\r02ffff\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:56]	
+											SYSC Interpreted Command: [('<readtca6416:0:20>', '', '', ''), ('<settca6416:0:20:00:00:00:00>', '', '', '')]
+											SYSC RAW Command: u'IS0\r20\r02\r2\r\tIW0\r20\r02ffff\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIS0\r20\r02\r2\r:P\rFFFF\r~~~\r:P\r[P0P1:1111111111111111]IW0\r20\r02ffff\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:43:56]	Finished Get GTR Expander Bits
+[TITLE		:	Mon, 26, Mar 2018 14:43:56]	Finished
+[TITLE		:	Mon, 26, Mar 2018 14:43:57]	PRESSED: Get PWR Expander Bits
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	SYSC Full Command: [('<readtca6416:0:21>', '', '', ''), ('<settca6416:0:21:00:00:00:00>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	
+											Running sysc func: <readtca6416:0:21>
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'IS0\r21\r02\r2\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'EFFF\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	
+											Running sysc func: <settca6416:0:21:00:00:00:00>
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	SYSC command returned: [P0P1:1110111111111111]
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'IW0\r21\r02efff\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:57]	
+											SYSC Interpreted Command: [('<readtca6416:0:21>', '', '', ''), ('<settca6416:0:21:00:00:00:00>', '', '', '')]
+											SYSC RAW Command: u'IS0\r21\r02\r2\r\tIW0\r21\r02efff\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rIS0\r21\r02\r2\r:P\rEFFF\r~~~\r:P\r[P0P1:1110111111111111]IW0\r21\r02efff\r:P\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:43:57]	Finished Get PWR Expander Bits
+[TITLE		:	Mon, 26, Mar 2018 14:43:57]	Finished
+[TITLE		:	Mon, 26, Mar 2018 14:43:59]	PRESSED: Get PL GPIO
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	SYSC Full Command: [('<mspgpioset:20:00>', '', '', ''), ('<mspgpioset:21:00>', '', '', ''), ('<mspgpioset:22:00>', '', '', ''), ('<mspgpioset:23:00>', '', '', ''), ('<mspgpiostate:20>', '', '', ''), ('<mspgpiostate:21>', '', '', ''), ('<mspgpiostate:22>', '', '', ''), ('<mspgpiostate:23>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	
+											Running sysc func: <mspgpioset:20:00>
+[INFO		:	Mon, 26, Mar 2018 14:43:59]	u'GPD\r20\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpioset:21:00>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPD\r21\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpioset:22:00>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPD\r22\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpioset:23:00>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPD\r23\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpiostate:20>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPR\r20\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpiostate:21>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPR\r21\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpiostate:22>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPR\r22\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											Running sysc func: <mspgpiostate:23>
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'GPR\r23\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'00\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:44:00]	
+											SYSC Interpreted Command: [('<mspgpioset:20:00>', '', '', ''), ('<mspgpioset:21:00>', '', '', ''), ('<mspgpioset:22:00>', '', '', ''), ('<mspgpioset:23:00>', '', '', ''), ('<mspgpiostate:20>', '', '', ''), ('<mspgpiostate:21>', '', '', ''), ('<mspgpiostate:22>', '', '', ''), ('<mspgpiostate:23>', '', '', '')]
+											SYSC RAW Command: u'GPD\r20\r00\r\tGPD\r21\r00\r\tGPD\r22\r00\r\tGPD\r23\r00\r\tGPR\r20\r\tGPR\r21\r\tGPR\r22\r\tGPR\r23\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rGPD\r20\r00\r:P\r~~~\r:P\rGPD\r21\r00\r:P\r~~~\r:P\rGPD\r22\r00\r:P\r~~~\r:P\rGPD\r23\r00\r:P\r~~~\r:P\rGPR\r20\r:P\r00\r~~~\r:P\rGPR\r21\r:P\r00\r~~~\r:P\rGPR\r22\r:P\r00\r~~~\r:P\rGPR\r23\r:P\r00\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:44:00]	Finished Get PL GPIO
+[TITLE		:	Mon, 26, Mar 2018 14:44:00]	Finished
+[TITLE		:	Mon, 26, Mar 2018 14:45:12]	PRESSED: Get DIP Switch
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	SYSC Full Command: [('<mspgpiostate:10>', '', '', ''), ('<mspinterpstate>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	
+											Running sysc func: <mspgpiostate:10>
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'GPR\r10\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'1F\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	
+											Running sysc func: <mspinterpstate>
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	SYSC command returned: GPIO[00011111]
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:12]	
+											SYSC Interpreted Command: [('<mspgpiostate:10>', '', '', ''), ('<mspinterpstate>', '', '', '')]
+											SYSC RAW Command: u'GPR\r10\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rGPR\r10\r:P\r1F\r~~~\r:P\rGPIO[00011111]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:45:12]	Finished Get DIP Switch
+[TITLE		:	Mon, 26, Mar 2018 14:45:12]	Finished
+[TITLE		:	Mon, 26, Mar 2018 14:45:13]	PRESSED: Get PMU Bits
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	SYSC Full Command: [('<mspgpiostate:11>', '', '', ''), ('<mspinterpstate>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	
+											Running sysc func: <mspgpiostate:11>
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'GPR\r11\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'3F\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	
+											Running sysc func: <mspinterpstate>
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	SYSC command returned: GPIO[00111111]
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:13]	
+											SYSC Interpreted Command: [('<mspgpiostate:11>', '', '', ''), ('<mspinterpstate>', '', '', '')]
+											SYSC RAW Command: u'GPR\r11\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rGPR\r11\r:P\r3F\r~~~\r:P\rGPIO[00111111]~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:45:13]	Finished Get PMU Bits
+[TITLE		:	Mon, 26, Mar 2018 14:45:13]	Finished
+[TITLE		:	Mon, 26, Mar 2018 14:45:14]	PRESSED: Get PS GPIO
+[INFO		:	Mon, 26, Mar 2018 14:45:14]	Starting step sysc
+											==========
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'\x08\r:R\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'\r:R\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	SYSC Full Command: [('<mspgpioset:24:00>', '', '', ''), ('<mspgpioset:25:00>', '', '', ''), ('<mspgpiostate:24>', '', '', ''), ('<mspgpiostate:25>', '', '', '')]
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	
+											Running sysc func: <mspgpioset:24:00>
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'GPD\r24\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	
+											Running sysc func: <mspgpioset:25:00>
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'GPD\r25\r00\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	
+											Running sysc func: <mspgpiostate:24>
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'GPR\r24\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'01\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	
+											Running sysc func: <mspgpiostate:25>
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'GPR\r25\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'01\r~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	u'~~~\r:P\r'
+[INFO		:	Mon, 26, Mar 2018 14:45:15]	
+											SYSC Interpreted Command: [('<mspgpioset:24:00>', '', '', ''), ('<mspgpioset:25:00>', '', '', ''), ('<mspgpiostate:24>', '', '', ''), ('<mspgpiostate:25>', '', '', '')]
+											SYSC RAW Command: u'GPD\r24\r00\r\tGPD\r25\r00\r\tGPR\r24\r\tGPR\r25\r\t'
+											SYSC Returned: u'\x08\r:R\r\r:R\r~~~\r:P\rGPD\r24\r00\r:P\r~~~\r:P\rGPD\r25\r00\r:P\r~~~\r:P\rGPR\r24\r:P\r01\r~~~\r:P\rGPR\r25\r:P\r01\r~~~\r:P\r~~~\r:P\r'
+[TITLE		:	Mon, 26, Mar 2018 14:45:15]	Finished Get PS GPIO
+[TITLE		:	Mon, 26, Mar 2018 14:45:15]	Finished

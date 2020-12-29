@@ -1,0 +1,120 @@
+{
+    "board": "ZCU102", 
+    "tests": [
+        {
+            "checked": 0, 
+            "name": "SYS_CTLR v1.01 RESTORE", 
+            "progress time": 83.43600034713745, 
+            "repeat": 1, 
+            "steps": [
+                {
+                    "baud": 115200, 
+                    "fail condition": [], 
+                    "pass condition": [
+                        "(.*)MSP v1.01 I2C Bridge v1.00(.*)"
+                    ], 
+                    "port": "Silicon Labs Quad CP210. USB to UART Bridge: Interface 3", 
+                    "type": "comm"
+                }, 
+                {
+                    "command": "Turn ZCU102 Board Power Off.\nSet mode switch SW6 to \"0\" (Up,Up,Up,Up)\nConnect two jumpers across J164 as shown in XTP433\nTurn ZCU102 Power On", 
+                    "delay": 1, 
+                    "type": "manc"
+                }, 
+                {
+                    "command": "tcl\\msp_flash0.tcl", 
+                    "fail condition": [], 
+                    "pass condition": [], 
+                    "type": "xsdb"
+                }, 
+                {
+                    "command": "bat\\firmware_flash_gui_092216.bat", 
+                    "delay": 15, 
+                    "fail condition": [
+                        "(.*)Error(.*)"
+                    ], 
+                    "pass condition": [
+                        "(.*)File\\s+sent\\s+successfully", 
+                        "(.*)System\\s+controller\\s+programmed\\s+successfully"
+                    ], 
+                    "type": "cmd"
+                }, 
+                {
+                    "command": "Remove the jumpers and cycle ZCU102 Board Power.", 
+                    "delay": 1, 
+                    "type": "manc"
+                }, 
+                {
+                    "command": "tcl\\five_second_delay.tcl", 
+                    "fail condition": [], 
+                    "pass condition": [], 
+                    "type": "tcl"
+                }, 
+                {
+                    "command": "VRN\r\t", 
+                    "comment": "About -> Get Version", 
+                    "port": "Silicon Labs Quad CP210. USB to UART Bridge: Interface 3", 
+                    "type": "sysc"
+                }
+            ]
+        }, 
+        {
+            "checked": 0, 
+            "name": "SYS_CTLR v1.30 RESTORE", 
+            "progress time": 83.16699981689453, 
+            "repeat": 1, 
+            "steps": [
+                {
+                    "baud": 115200, 
+                    "fail condition": [], 
+                    "pass condition": [
+                        "(.*)MSP v1.10 I2C Bridge v1.30(.*)"
+                    ], 
+                    "port": "Silicon Labs Quad CP210. USB to UART Bridge: Interface 3", 
+                    "type": "comm"
+                }, 
+                {
+                    "command": "Turn ZCU102 Board Power Off.\nSet mode switch SW6 to \"0\" (Up,Up,Up,Up)\nConnect two jumpers across J164 as shown in XTP433\nTurn ZCU102 Power On", 
+                    "delay": 1, 
+                    "type": "manc"
+                }, 
+                {
+                    "command": "tcl\\msp_flash0.tcl", 
+                    "fail condition": [], 
+                    "pass condition": [], 
+                    "type": "xsdb"
+                }, 
+                {
+                    "command": "bat\\firmware_flash_gui_051717.bat", 
+                    "delay": 15, 
+                    "fail condition": [
+                        "(.*)Error(.*)"
+                    ], 
+                    "pass condition": [
+                        "(.*)File\\s+sent\\s+successfully", 
+                        "(.*)System\\s+controller\\s+programmed\\s+successfully"
+                    ], 
+                    "type": "cmd"
+                }, 
+                {
+                    "command": "Remove the jumpers and cycle ZCU102 Board Power.", 
+                    "delay": 1, 
+                    "type": "manc"
+                }, 
+                {
+                    "command": "tcl\\five_second_delay.tcl", 
+                    "fail condition": [], 
+                    "pass condition": [], 
+                    "type": "tcl"
+                }, 
+                {
+                    "command": "VRN\r\t", 
+                    "comment": "About -> Get Version", 
+                    "port": "Silicon Labs Quad CP210. USB to UART Bridge: Interface 3", 
+                    "type": "sysc"
+                }
+            ]
+        }
+    ], 
+    "vivado path": "C:\\Xilinx\\Vivado\\2018.3"
+}
